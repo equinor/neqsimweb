@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div style="-rave-layout: grid" xmlns:h="http://java.sun.com/jsf/html">
+    <h:outputText binding="#{Thermo$BottomText.createdByText}" id="createdByText" style="height: 24px; left: 24px; top: 24px; position: absolute; width: 578px" value="Created by: Even Solbraa, Statoil Research Centre, Trondheim 2004"/>
+    <h:outputText binding="#{Thermo$BottomText.visitorsText}" id="visitorsText" style="height: 28px; left: 24px; top: 48px; position: absolute; width: 216px" value="Total Numer of Views:"/>
+</div>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div style="-rave-layout: grid" xmlns:h="http://java.sun.com/jsf/html" xmlns:ui="http://www.sun.com/web/ui">
+    <h:outputText binding="#{Thermo$ComponentSelector.methaneTextID}" id="methaneTextID"
+        style="font-size: 14px; height: 24px; left: 0px; top: 360px; position: absolute; width: 240px" value="methane"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.ethaneTextID}" id="ethaneTextID"
+        style="height: 24px; left: 0px; top: 384px; position: absolute; width: 240px" value="ethane"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.propaneTextID}" id="propaneTextID"
+        style="font-size: 14px; height: 24px; left: 0px; top: 408px; position: absolute; width: 240px" value="propane"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.ibutaneTextID}" id="ibutaneTextID"
+        style="font-size: 14px; height: 24px; left: 0px; top: 432px; position: absolute; width: 240px" value="i-butane"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.nbutaneTextID}" id="nbutaneTextID"
+        style="font-size: 14px; height: 24px; left: 0px; top: 456px; position: absolute; width: 240px" value="n-butane"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.pentaneTextID}" id="pentaneTextID"
+        style="font-size: 14px; height: 24px; left: 0px; top: 480px; position: absolute; width: 240px" value="pentane"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.waterTextID}" id="waterTextID"
+        style="height: 24px; left: 768px; top: 288px; position: absolute; width: 166px" value="water"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.hexaneTextID}" id="hexaneTextID"
+        style="font-size: 14px; height: 24px; left: 0px; top: 504px; position: absolute; width: 240px" value="hexane"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.methaneTextField}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="methaneTextField"
+        required="true" style="height: 24px; left: 144px; top: 360px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.METHANE']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.ethaneTextField}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="ethaneTextField"
+        required="true" style="height: 24px; left: 144px; top: 384px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.ETHANE']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.propaneTextField}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="propaneTextField"
+        required="true" style="height: 24px; left: 144px; top: 408px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.PROPANE']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.nbutaneTextField}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="nbutaneTextField"
+        required="true" style="height: 24px; left: 144px; top: 456px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.NBUTANE']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.pentaneTextField}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="pentaneTextField"
+        required="true" style="height: 24px; left: 144px; top: 480px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.PENTANE']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.hexaneTextField}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="hexaneTextField"
+        required="true" style="height: 24px; left: 144px; top: 504px; position: absolute; width: 96px"
+        value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.NHEXANE']}" valueChangeListener="#{Thermo$ComponentSelector.hexaneTextField_processValueChange}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.carbondioxTextID}" id="carbondioxTextID"
+        style="font-size: 14px; height: 24px; left: 0px; top: 288px; position: absolute; width: 240px" value="CO2"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.nitrogenTextID}" id="nitrogenTextID"
+        style="font-size: 14px; height: 24px; left: 0px; top: 336px; position: absolute; width: 240px" value="nitrogen"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.carbonDioxideTextField}" converter="#{Thermo$ComponentSelector.doubleConverter1}"
+        id="carbonDioxideTextField" required="true" style="height: 24px; left: 144px; top: 288px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.CO2']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.nitrogenTextField}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="nitrogenTextField"
+        required="true" style="height: 24px; left: 144px; top: 336px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.NITROGEN']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.waterTextField}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="waterTextField"
+        required="true" style="height: 24px; left: 936px; top: 288px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.WATER']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.ibutaneTextField}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="ibutaneTextField"
+        required="true" style="height: 24px; left: 144px; top: 432px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.IBUTANE']}"/>
+    <h:commandButton action="#{Thermo$ComponentSelector.calculateButton_action}" binding="#{Thermo$ComponentSelector.calculateButton}" id="calculateButton"
+        style="height: 24px; left: 576px; top: 192px; position: absolute; width: 72px" value="Ok"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.standardCompText}" id="standardCompText"
+        style="font-size: 14px; font-weight: bold; height: 26px; left: 0px; top: 264px; position: absolute; width: 142px" value="Standard components"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.polarComponentName}" id="polarComponentName"
+        style="font-size: 14px; font-weight: bold; height: 24px; left: 744px; top: 264px; position: absolute; width: 166px" value="Polar components"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.megTextID}" id="megTextID"
+        style="font-size: 14px; height: 24px; left: 768px; top: 336px; position: absolute; width: 166px" value="MEG"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.megTextField}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="megTextField" required="true"
+        style="height: 24px; left: 936px; top: 336px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.MEG']}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.tegTextID}" id="tegTextID"
+        style="font-size: 14px; height: 24px; left: 768px; top: 360px; position: absolute; width: 166px" value="TEG"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.tegTextField}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="tegTextField" required="true"
+        style="height: 24px; left: 936px; top: 360px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.TEG']}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.degTextID}" id="degTextID"
+        style="font-size: 14px; height: 24px; left: 768px; top: 384px; position: absolute; width: 166px" value="DEG"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.degTextField}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="degTextField" required="true"
+        style="height: 24px; left: 936px; top: 384px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.DEG']}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.mdeaTextID}" id="mdeaTextID"
+        style="font-size: 14px; height: 24px; left: 768px; top: 456px; position: absolute; width: 166px" value="MDEA"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.mdeaTextField}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="mdeaTextField" required="true"
+        style="height: 24px; left: 936px; top: 456px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.MDEA']}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.methanolTextID}" id="methanolTextID"
+        style="font-size: 14px; height: 24px; left: 768px; top: 312px; position: absolute; width: 166px" value="methanol"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.methanolTextField}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="methanolTextField"
+        required="true" style="height: 24px; left: 936px; top: 312px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.METHANOL']}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.molprsectext}" id="molprsectext"
+        style="font-size: 14px; height: 26px; left: 144px; top: 264px; position: absolute; width: 144px" value="rate [mol/sec]"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.molprsectext1}" id="molprsectext1"
+        style="font-size: 14px; height: 26px; left: 936px; top: 264px; position: absolute; width: 144px" value="rate [mol/sec]"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.heavyCompText}" id="heavyCompText"
+        style="font-size: 14px; font-weight: bold; height: 26px; left: 0px; top: 624px; position: absolute; width: 240px" value="TBP fraction"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.molprsectext2}" id="molprsectext2"
+        style="font-size: 14px; height: 24px; left: 144px; top: 624px; position: absolute; width: 96px" value="rate [mol/sec]"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.c6TextID}" id="c6TextID"
+        style="font-size: 14px; height: 24px; left: 0px; top: 648px; position: absolute; width: 240px" value="C6"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.c6TextField}" id="c6TextField" required="true"
+        style="height: 24px; left: 144px; top: 648px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C6']}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.molmasstext}" id="molmasstext"
+        style="font-size: 14px; height: 24px; left: 240px; top: 624px; position: absolute; width: 146px" value="molar mass [gr/mol]"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.molarMassC6TextField}" id="molarMassC6TextField" required="true"
+        style="height: 24px; left: 240px; top: 648px; position: absolute; width: 144px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C6MOLARMASS']}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.densitytext}" id="densitytext"
+        style="font-size: 14px; height: 24px; left: 384px; top: 624px; position: absolute; width: 142px" value="density [gr/cm^3]"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.densityC6TextField}" id="densityC6TextField" required="true"
+        style="height: 24px; left: 384px; top: 648px; position: absolute; width: 144px"
+        value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C6DENSITY']}" valueChangeListener="#{Thermo$ComponentSelector.densityC6TextField_processValueChange}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.c7TextID}" id="c7TextID"
+        style="font-size: 14px; height: 24px; left: 0px; top: 672px; position: absolute; width: 240px" value="C7"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.c7TextField}" id="c7TextField" required="true"
+        style="height: 24px; left: 144px; top: 672px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C7']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.molarMassC7TextField}" id="molarMassC7TextField" required="true"
+        style="height: 24px; left: 240px; top: 672px; position: absolute; width: 144px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C7MOLARMASS']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.densityC7TextField}" id="densityC7TextField" required="true"
+        style="height: 24px; left: 384px; top: 672px; position: absolute; width: 144px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C7DENSITY']}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.c8TextID}" id="c8TextID"
+        style="font-size: 14px; height: 24px; left: 0px; top: 696px; position: absolute; width: 240px" value="C8"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.c8TextField}" id="c8TextField" required="true"
+        style="height: 24px; left: 144px; top: 696px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C8']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.molarMassC8TextField}" id="molarMassC8TextField" required="true"
+        style="height: 24px; left: 240px; top: 696px; position: absolute; width: 144px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C8MOLARMASS']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.densityC8TextField}" id="densityC8TextField" required="true"
+        style="height: 24px; left: 384px; top: 696px; position: absolute; width: 144px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C8DENSITY']}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.c9TextID}" id="c9TextID"
+        style="font-size: 14px; height: 24px; left: 0px; top: 720px; position: absolute; width: 240px" value="C9"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.c9TextField}" id="c9TextField" required="true"
+        style="height: 24px; left: 144px; top: 720px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C9']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.molarMassC9TextField}" id="molarMassC9TextField" required="true"
+        style="height: 24px; left: 240px; top: 720px; position: absolute; width: 144px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C9MOLARMASS']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.densityC9TextField}" id="densityC9TextField" required="true"
+        style="height: 24px; left: 384px; top: 720px; position: absolute; width: 144px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C9DENSITY']}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.c10TextID}" id="c10TextID"
+        style="font-size: 14px; height: 24px; left: 0px; top: 744px; position: absolute; width: 240px" value="C10"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.c10TextField}" id="c10TextField" required="true"
+        style="height: 24px; left: 144px; top: 744px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C10']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.molarMassC10TextField}" id="molarMassC10TextField" required="true"
+        style="height: 24px; left: 240px; top: 744px; position: absolute; width: 144px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C10MOLARMASS']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.densityC10TextField}" id="densityC10TextField" required="true"
+        style="height: 24px; left: 384px; top: 744px; position: absolute; width: 144px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C10DENSITY']}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.c11TextID}" id="c11TextID"
+        style="font-size: 14px; height: 24px; left: 0px; top: 768px; position: absolute; width: 240px" value="C11"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.c11TextField}" id="c11TextField" required="true"
+        style="height: 24px; left: 144px; top: 768px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C11']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.molarMassC11TextField}" id="molarMassC11TextField" required="true"
+        style="height: 24px; left: 240px; top: 768px; position: absolute; width: 144px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C11MOLARMASS']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.densityC11TextField}" id="densityC11TextField" required="true"
+        style="height: 24px; left: 384px; top: 768px; position: absolute; width: 144px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C11DENSITY']}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.c12TextID}" id="c12TextID"
+        style="font-size: 14px; height: 24px; left: 0px; top: 792px; position: absolute; width: 240px" value="C12"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.c12TextField}" id="c12TextField" required="true"
+        style="height: 24px; left: 144px; top: 792px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C12']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.molarMassC12TextField}" id="molarMassC12TextField" required="true"
+        style="height: 24px; left: 240px; top: 792px; position: absolute; width: 144px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C12MOLARMASS']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.densityC12TextField}" id="densityC12TextField" required="true"
+        style="height: 24px; left: 384px; top: 792px; position: absolute; width: 144px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C12DENSITY']}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.c13TextID}" id="c13TextID"
+        style="font-size: 14px; height: 24px; left: 0px; top: 816px; position: absolute; width: 240px" value="C13"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.c13TextField}" id="c13TextField" required="true"
+        style="height: 24px; left: 144px; top: 816px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C13']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.molarMassC13TextField}" id="molarMassC13TextField" required="true"
+        style="height: 24px; left: 240px; top: 816px; position: absolute; width: 144px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C13MOLARMASS']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.densityC13TextField}" id="densityC13TextField" required="true"
+        style="height: 24px; left: 384px; top: 816px; position: absolute; width: 144px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.C13DENSITY']}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.plusFracTextID}" id="plusFracTextID"
+        style="font-size: 14px; height: 24px; left: 0px; top: 864px; position: absolute; width: 240px" value="plus fraction"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.plusFractionTextField}" id="plusFractionTextField" required="true"
+        style="height: 24px; left: 144px; top: 864px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.CPLUS']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.molarMassPlusFractionTextField}" id="molarMassPlusFractionTextField" required="true"
+        style="height: 24px; left: 240px; top: 864px; position: absolute; width: 144px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.CPLUSMOLARMASS']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.densityPlusFractionTextField}" id="densityPlusFractionTextField" required="true"
+        style="height: 24px; left: 384px; top: 864px; position: absolute; width: 144px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.CPLUSDENSITY']}"/>
+    <ui:textField binding="#{Thermo$ComponentSelector.benzeneTextField}" columns="10" converter="#{Thermo$ComponentSelector.doubleConverter1}"
+        id="benzeneTextField" required="true" style="height: 24px; left: 528px; top: 456px; position: absolute; width: 96px" text="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.BENZENE']}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.armoathicHCText}" id="armoathicHCText"
+        style="font-size: 14px; font-weight: bold; height: 26px; left: 384px; top: 264px; position: absolute; width: 142px" value="Hydrocarbons"/>
+    <ui:textField binding="#{Thermo$ComponentSelector.tolueneTextField}" columns="10" converter="#{Thermo$ComponentSelector.doubleConverter1}"
+        id="tolueneTextField" required="true" style="height: 24px; left: 528px; top: 480px; position: absolute; width: 96px" text="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.TOLUENE']}"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message1}" for="benzeneTextField" id="message1" showDetail="false" showSummary="true" style="left: 624px; top: 456px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message2}" for="tolueneTextField" id="message2" showDetail="false" showSummary="true" style="height: 24px; left: 624px; top: 480px; position: absolute; width: 142px"/>
+    <ui:textField binding="#{Thermo$ComponentSelector.mxyleneTextField}" columns="10" converter="#{Thermo$ComponentSelector.doubleConverter1}"
+        id="mxyleneTextField" required="true" style="height: 24px; left: 528px; top: 504px; position: absolute; width: 96px" text="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.MXYLENE']}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.componentTextID}" id="componentTextID"
+        style="font-size: 14px; height: 24px; left: 384px; top: 456px; position: absolute; width: 142px" value="benzene"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.componentTextID1}" id="componentTextID1"
+        style="font-size: 14px; height: 24px; left: 384px; top: 480px; position: absolute; width: 142px" value="toluene"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.componentTextID2}" id="componentTextID2"
+        style="font-size: 14px; height: 24px; left: 384px; top: 504px; position: absolute; width: 142px" value="m-Xylene"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.componentTextID3}" id="componentTextID3"
+        style="font-size: 14px; height: 24px; left: 384px; top: 528px; position: absolute; width: 142px" value="p-Xylene"/>
+    <ui:textField binding="#{Thermo$ComponentSelector.pxyleneTextField}" columns="10" converter="#{Thermo$ComponentSelector.doubleConverter1}"
+        id="pxyleneTextField" required="true" style="height: 24px; left: 528px; top: 528px; position: absolute; width: 96px" text="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.PXYLENE']}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.componentTextID4}" id="componentTextID4"
+        style="font-size: 14px; height: 24px; left: 384px; top: 552px; position: absolute; width: 142px" value="o-Xylene"/>
+    <ui:textField binding="#{Thermo$ComponentSelector.oxyleneTextField}" columns="10" converter="#{Thermo$ComponentSelector.doubleConverter1}"
+        id="oxyleneTextField" required="true" style="height: 24px; left: 528px; top: 552px; position: absolute; width: 96px" text="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.OXYLENE']}"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message3}" for="mxyleneTextField" id="message3" showDetail="false" showSummary="true" style="height: 24px; left: 624px; top: 504px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message4}" for="pxyleneTextField" id="message4" showDetail="false" showSummary="true" style="height: 24px; left: 624px; top: 528px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message5}" for="oxyleneTextField" id="message5" showDetail="false" showSummary="true" style="height: 24px; left: 624px; top: 552px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message6}" for="methaneTextField" id="message6" showDetail="false" showSummary="true" style="left: 240px; top: 360px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message7}" for="ethaneTextField" id="message7" showDetail="false" showSummary="true" style="left: 240px; top: 384px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message8}" for="propaneTextField" id="message8" showDetail="false" showSummary="true" style="left: 240px; top: 408px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message9}" for="ibutaneTextField" id="message9" showDetail="false" showSummary="true" style="left: 240px; top: 432px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message10}" for="nbutaneTextField" id="message10" showDetail="false" showSummary="true" style="left: 240px; top: 456px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message11}" for="pentaneTextField" id="message11" showDetail="false" showSummary="true" style="left: 240px; top: 480px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message12}" for="hexaneTextField" id="message12" showDetail="false" showSummary="true" style="left: 240px; top: 504px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message13}" for="carbonDioxideTextField" id="message13" showDetail="false" showSummary="true" style="left: 240px; top: 288px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message14}" for="nitrogenTextField" id="message14" showDetail="false" showSummary="true" style="left: 240px; top: 336px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message15}" for="waterTextField" id="message15" showDetail="false" showSummary="true" style="left: 1032px; top: 288px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message16}" for="methanolTextField" id="message16" showDetail="false" showSummary="true" style="left: 1032px; top: 312px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message17}" for="megTextField" id="message17" showDetail="false" showSummary="true" style="left: 1032px; top: 336px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message18}" for="tegTextField" id="message18" showDetail="false" showSummary="true" style="left: 1032px; top: 360px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message19}" for="degTextField" id="message19" showDetail="false" showSummary="true" style="left: 1032px; top: 384px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message20}" for="mdeaTextField" id="message20" showDetail="false" showSummary="true" style="left: 1032px; top: 456px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message21}" for="c6TextField" id="message21" showDetail="false" showSummary="true" style="left: 528px; top: 648px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message22}" for="c7TextField" id="message22" showDetail="false" showSummary="true" style="left: 528px; top: 672px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message23}" for="c8TextField" id="message23" showDetail="false" showSummary="true" style="left: 528px; top: 696px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message24}" for="c9TextField" id="message24" showDetail="false" showSummary="true" style="left: 528px; top: 720px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message25}" for="c10TextField" id="message25" showDetail="false" showSummary="true" style="left: 528px; top: 744px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message26}" for="c11TextField" id="message26" showDetail="false" showSummary="true" style="left: 528px; top: 768px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message27}" for="c12TextField" id="message27" showDetail="false" showSummary="true" style="left: 528px; top: 792px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message28}" for="c13TextField" id="message28" showDetail="false" showSummary="true" style="left: 528px; top: 816px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message29}" for="plusFractionTextField" id="message29" showDetail="false" showSummary="true" style="left: 528px; top: 864px; position: absolute; width: 142px"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.aminesName}" id="aminesName"
+        style="font-size: 14px; font-weight: bold; height: 24px; left: 768px; top: 432px; position: absolute; width: 166px" value="Alkanol amines"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.pzTextID}" id="pzTextID"
+        style="font-size: 14px; height: 24px; left: 768px; top: 480px; position: absolute; width: 166px" value="Piperazine"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.piperazineTextField}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="piperazineTextField"
+        required="true" style="height: 24px; left: 936px; top: 480px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.PIPERAZINE']}"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message30}" for="piperazineTextField" id="message30" showDetail="false" showSummary="true" style="left: 1032px; top: 480px; position: absolute; width: 142px"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.acidsName}" id="acidsName"
+        style="font-size: 14px; font-weight: bold; height: 24px; left: 768px; top: 528px; position: absolute; width: 166px" value="Acids"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.aceticAcidTextID}" id="aceticAcidTextID"
+        style="font-size: 14px; height: 24px; left: 768px; top: 552px; position: absolute; width: 166px" value="acetic aicd"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.aceticAcidTextField}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="aceticAcidTextField"
+        required="true" style="height: 24px; left: 936px; top: 552px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.ACETICACID']}"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message31}" for="aceticAcidTextField" id="message31" showDetail="false" showSummary="true" style="left: 1032px; top: 552px; position: absolute; width: 142px"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.propionicAcidTextID}" id="propionicAcidTextID"
+        style="font-size: 14px; height: 24px; left: 768px; top: 576px; position: absolute; width: 166px" value="propionic acid"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.propionicAcidTextField}" converter="#{Thermo$ComponentSelector.doubleConverter1}"
+        id="propionicAcidTextField" required="true" style="height: 24px; left: 936px; top: 576px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.PROPIONICACID']}"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message32}" for="propionicAcidTextField" id="message32" showDetail="false" showSummary="true" style="left: 1032px; top: 576px; position: absolute; width: 142px"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.slatsName}" id="slatsName"
+        style="font-size: 14px; font-weight: bold; height: 24px; left: 768px; top: 624px; position: absolute; width: 166px" value="Ions"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.naTextID1}" id="naTextID1"
+        style="font-size: 14px; height: 24px; left: 768px; top: 648px; position: absolute; width: 166px" value="Na+"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.naplusTextField1}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="naplusTextField1"
+        required="true" style="height: 24px; left: 936px; top: 648px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.NAPLUS']}"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message33}" for="naplusTextField1" id="message33" showDetail="false" showSummary="true" style="left: 1032px; top: 648px; position: absolute; width: 142px"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.feTextID2}" id="feTextID2"
+        style="font-size: 14px; height: 24px; left: 768px; top: 672px; position: absolute; width: 166px" value="Fe++"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.feplusplusTextField2}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="feplusplusTextField2"
+        required="true" style="height: 24px; left: 936px; top: 672px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.FEPLUS']}"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message34}" for="feplusplusTextField2" id="message34" showDetail="false" showSummary="true" style="left: 1032px; top: 672px; position: absolute; width: 142px"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.clTextID1}" id="clTextID1"
+        style="font-size: 14px; height: 24px; left: 768px; top: 768px; position: absolute; width: 166px" value="Cl-"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.clMinusTextField1}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="clMinusTextField1"
+        required="true" style="height: 24px; left: 936px; top: 768px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.CLMINUS']}"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message35}" for="clMinusTextField1" id="message35" showDetail="false" showSummary="true" style="left: 1032px; top: 768px; position: absolute; width: 142px"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.caTextID1}" id="caTextID1"
+        style="font-size: 14px; height: 24px; left: 768px; top: 696px; position: absolute; width: 166px" value="Ca++"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.caplusplusTextField1}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="caplusplusTextField1"
+        required="true" style="height: 24px; left: 936px; top: 696px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.CAPLUS']}"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message36}" for="caplusplusTextField1" id="message36" showDetail="false" showSummary="true" style="left: 1032px; top: 696px; position: absolute; width: 142px"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.clTextID2}" id="clTextID2"
+        style="font-size: 14px; height: 24px; left: 768px; top: 744px; position: absolute; width: 166px" value="CO3--"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.co3MinusTextField2}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="co3MinusTextField2"
+        required="true" style="height: 24px; left: 936px; top: 744px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.CO3MINUS']}"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message37}" for="co3MinusTextField2" id="message37" showDetail="false" showSummary="true" style="left: 1032px; top: 744px; position: absolute; width: 142px"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.ohTextID3}" id="ohTextID3"
+        style="font-size: 14px; height: 24px; left: 768px; top: 720px; position: absolute; width: 166px" value="OH-"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.ohMinusTexField1}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="ohMinusTexField1"
+        required="true" style="height: 24px; left: 936px; top: 720px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.OHMINUS']}"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message39}" for="ohMinusTexField1" id="message39" showDetail="false" showSummary="true" style="left: 1032px; top: 720px; position: absolute; width: 142px"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.fluidTextField1}" id="fluidTextField1"
+        style="height: 24px; left: 576px; top: 0px; position: absolute; width: 168px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.FIELD']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.testTextField1}" id="testTextField1"
+        style="height: 24px; left: 312px; top: 0px; position: absolute; width: 168px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.TEST']}"/>
+    <h:inputTextarea binding="#{Thermo$ComponentSelector.historyTextArea}" id="historyTextArea"
+        style="height: 120px; left: 48px; top: 96px; position: absolute; width: 432px"
+        value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.HISTORY']}" valueChangeListener="#{Thermo$ComponentSelector.historyTextArea_processValueChange}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.testTextField2}" id="testTextField2"
+        style="height: 24px; left: 576px; top: 48px; position: absolute; width: 168px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.TEXT']}"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.wellTextField1}" id="wellTextField1"
+        style="height: 24px; left: 48px; top: 0px; position: absolute; width: 168px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.WELL']}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.outputText2}" id="outputText2"
+        style="font-size: 12px; height: 24px; left: 0px; top: 96px; position: absolute; width: 46px" value="History"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.outputText3}" id="outputText3"
+        style="font-size: 12px; height: 24px; left: 0px; top: 48px; position: absolute; width: 46px" value="Sample"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.outputText4}" id="outputText4"
+        style="font-size: 12px; height: 24px; left: 0px; top: 0px; position: absolute; width: 46px" value="Well"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.outputText5}" id="outputText5"
+        style="font-size: 12px; height: 24px; left: 528px; top: 0px; position: absolute; width: 46px" value="Field"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.sampleTextField1}" id="sampleTextField1"
+        style="height: 24px; left: 48px; top: 48px; position: absolute; width: 432px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.SAMPLE']}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.outputText6}" id="outputText6"
+        style="font-size: 12px; height: 24px; left: 528px; top: 48px; position: absolute; width: 46px" value="Text"/>
+    <ui:button action="#{Thermo$ComponentSelector.open_action}" binding="#{Thermo$ComponentSelector.open}" id="open"
+        style="font-size: 12px; height: 24px; left: 576px; top: 96px; position: absolute; width: 72px" text="Open/Add"/>
+    <ui:button action="#{Thermo$ComponentSelector.saveButton_action}" binding="#{Thermo$ComponentSelector.saveButton}" id="saveButton"
+        style="height: 24px; left: 576px; top: 144px; position: absolute; width: 72px" text="Save"/>
+    <h:commandLink action="#{Thermo$ComponentSelector.linkAction1_action}" binding="#{Thermo$ComponentSelector.linkAction1}" id="linkAction1" style="height: 24px; left: 672px; top: 192px; position: absolute; width: 72px">
+        <h:outputText binding="#{Thermo$ComponentSelector.linkAction1Text}" id="linkAction1Text" value="help"/>
+    </h:commandLink>
+    <h:outputText binding="#{Thermo$ComponentSelector.testoutputText}" id="testoutputText"
+        style="font-size: 12px; height: 24px; left: 240px; top: 0px; position: absolute; width: 72px" value="Test"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.componentTextID5}" id="componentTextID5"
+        style="font-size: 14px; height: 24px; left: 384px; top: 336px; position: absolute; width: 142px" value="n-heptane"/>
+    <ui:staticText binding="#{Thermo$ComponentSelector.staticText1}" id="staticText1" style="left: 384px; top: 360px; position: absolute; width: 142px" text="n-octane"/>
+    <ui:staticText binding="#{Thermo$ComponentSelector.staticText2}" id="staticText2" style="left: 384px; top: 384px; position: absolute; width: 142px" text="n-nonane"/>
+    <ui:staticText binding="#{Thermo$ComponentSelector.staticText3}" id="staticText3" style="left: 384px; top: 408px; position: absolute; width: 142px" text="n-decane"/>
+    <ui:staticText binding="#{Thermo$ComponentSelector.staticText4}" id="staticText4" style="left: 384px; top: 288px; position: absolute; width: 142px" text="cyclo-pentane"/>
+    <ui:textField binding="#{Thermo$ComponentSelector.nheptaneTextField}" columns="10" converter="#{Thermo$ComponentSelector.doubleConverter1}"
+        id="nheptaneTextField" required="true" style="height: 24px; left: 528px; top: 336px; position: absolute; width: 96px" text="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.NHEPTANE']}"/>
+    <ui:textField binding="#{Thermo$ComponentSelector.noctaneTextField}" columns="10" converter="#{Thermo$ComponentSelector.doubleConverter1}"
+        id="noctaneTextField" required="true" style="height: 24px; left: 528px; top: 360px; position: absolute; width: 96px" text="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.NOCTANE']}"/>
+    <ui:textField binding="#{Thermo$ComponentSelector.nnonaneTextField}" columns="10" converter="#{Thermo$ComponentSelector.doubleConverter1}"
+        id="nnonaneTextField" required="true" style="height: 24px; left: 528px; top: 384px; position: absolute; width: 96px" text="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.NNONANE']}"/>
+    <ui:textField binding="#{Thermo$ComponentSelector.ndecaneTextField}" columns="10" converter="#{Thermo$ComponentSelector.doubleConverter1}"
+        id="ndecaneTextField" required="true" style="height: 24px; left: 528px; top: 408px; position: absolute; width: 96px" text="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.NDECANE']}"/>
+    <ui:textField binding="#{Thermo$ComponentSelector.cc5TextField}" columns="10" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="cc5TextField"
+        required="true" style="height: 24px; left: 528px; top: 288px; position: absolute; width: 96px" text="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.CYCPENTANE']}"/>
+    <ui:staticText binding="#{Thermo$ComponentSelector.staticText5}" id="staticText5" style="left: 384px; top: 312px; position: absolute; width: 142px" text="cyclo-hexane"/>
+    <ui:textField binding="#{Thermo$ComponentSelector.cc6TextField}" columns="10" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="cc6TextField"
+        required="true" style="height: 24px; left: 528px; top: 312px; position: absolute; width: 96px" text="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.CYCHEXANE']}"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message40}" for="cc5TextField" id="message40" showDetail="false" showSummary="true" style="left: 624px; top: 288px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message41}" for="cc6TextField" id="message41" showDetail="false" showSummary="true" style="left: 624px; top: 312px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message42}" for="nheptaneTextField" id="message42" showDetail="false" showSummary="true" style="left: 624px; top: 336px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message43}" for="noctaneTextField" id="message43" showDetail="false" showSummary="true" style="left: 624px; top: 360px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message44}" for="nnonaneTextField" id="message44" showDetail="false" showSummary="true" style="left: 624px; top: 384px; position: absolute; width: 142px"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message45}" for="ndecaneTextField" id="message45" showDetail="false" showSummary="true" style="left: 624px; top: 408px; position: absolute; width: 142px"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.componentTextID6}" id="componentTextID6"
+        style="font-size: 14px; height: 24px; left: 0px; top: 312px; position: absolute; width: 142px" value="H2S"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.h2sTextField1}" converter="#{Thermo$ComponentSelector.doubleConverter1}" id="h2sTextField1" required="true"
+        style="height: 24px; left: 144px; top: 312px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.H2S']}"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message46}" for="h2sTextField1" id="message46" showDetail="false" showSummary="true" style="left: 240px; top: 312px; position: absolute; width: 142px"/>
+    <h:inputText binding="#{Thermo$ComponentSelector.SO4minusMinusTextField}" converter="#{Thermo$ComponentSelector.doubleConverter1}"
+        id="SO4minusMinusTextField" required="true" style="height: 24px; left: 936px; top: 792px; position: absolute; width: 96px" value="#{Thermo$ComponentSelector.fieldfluidsDataProvider.value['fluidinfo.CLMINUS']}"/>
+    <h:outputText binding="#{Thermo$ComponentSelector.SO4TextID}" id="SO4TextID"
+        style="font-size: 14px; height: 24px; left: 768px; top: 792px; position: absolute; width: 166px" value="SO4--"/>
+    <ui:message binding="#{Thermo$ComponentSelector.message38}" for="SO4minusMinusTextField" id="message38" showDetail="false" showSummary="true" style="left: 1032px; top: 792px; position: absolute; width: 142px"/>
+</div>

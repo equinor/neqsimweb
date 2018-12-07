@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<auxiliary-configuration xmlns="http://www.netbeans.org/ns/auxiliary-configuration/1">
+    <creator-data xmlns="http://www.sun.com/creator/ns" jsf.current.theme="theme-default" jsf.pagebean.package="neqsimserver2" jsf.project.libraries.dir="lib" jsf.project.version="3.0-import" jsf.startPage="Login.jsp"/>
+</auxiliary-configuration>

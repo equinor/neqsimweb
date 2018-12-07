@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!-- 
+    Document   : DocumentStatistics
+    Created on : 03.jan.2013, 22:23:53
+    Author     : ESOL
+-->
+<div style="height: 200px; width: 1000px; -rave-layout: grid" xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://www.sun.com/web/ui">
+    <f:subview id="DocumentStatistics">
+        <ui:staticText id="staticText1" style="height: 24px; width: 334px" text="Experimental data  relevant for  this fluid composition:"/>
+        <ui:staticText id="staticText2" style="height: 22px; left: 0px; top: 24px; position: absolute; width: 334px" text="Number of documents with experimental   data is"/>
+        <ui:staticText binding="#{Thermo$DocumentStatistics.numberOfArticlesText}" id="numberOfArticlesText" style="height: 24px; left: 336px; top: 24px; position: absolute; width: 22px"/>
+        <ui:hyperlink action="#{Thermo$DocumentStatistics.hyperlink1_action}" id="hyperlink1"
+            style="color: blue; height: 22px; left: 384px; top: 24px; position: absolute; text-decoration: underline; width: 238px" text="View document list"/>
+        <ui:staticText id="staticText3" style="height: 22px; left: 0px; top: 48px; position: absolute; width: 406px" text="Number of documents with experimental   data in total is"/>
+        <ui:staticText binding="#{Thermo$DocumentStatistics.numberOfArticlesTotalText}" id="numberOfArticlesTotalText" style="height: 24px; left: 336px; top: 48px; position: absolute; width: 22px"/>
+        <ui:hyperlink action="#{Thermo$DocumentStatistics.hyperlink2_action}" id="hyperlink2"
+            style="color: blue; height: 22px; left: 384px; top: 48px; position: absolute; text-decoration: underline; width: 238px" text="View document list"/>
+        <ui:staticText id="staticText4" style="height: 22px; left: 0px; top: 72px; position: absolute; width: 406px" text="Documentation"/>
+        <ui:hyperlink binding="#{Thermo$DocumentStatistics.hyperlink3}" id="hyperlink3" immediate="true"
+            style="color: blue; font-size: 12px; height: 24px; left: 384px; top: 72px; position: absolute; text-decoration: underline; width: 238px" text="View documents"/>
+    </f:subview>
+</div>

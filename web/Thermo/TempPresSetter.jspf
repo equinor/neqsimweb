@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div style="-rave-layout: grid" xmlns:h="http://java.sun.com/jsf/html">
+    <h:outputText binding="#{Thermo$TempPresSetter.temperatureLableText}" id="temperatureLableText"
+        style="height: 26px; position: absolute; width: 168px; font-size: 14px; left: 48px; top: 48px" value="Temperature [C]"/>
+    <h:outputText binding="#{Thermo$TempPresSetter.pressureLabelText}" id="pressureLabelText"
+        style="height: 26px; position: absolute; width: 168px; font-size: 14px; left: 48px; top: 96px" value="Pressure [bara]"/>
+    <h:inputText binding="#{Thermo$TempPresSetter.temperatureTextField}" id="temperatureTextField"
+        style="height: 24px; left: 240px; top: 48px; position: absolute; width: 216px" value="25"/>
+    <h:inputText binding="#{Thermo$TempPresSetter.pressureTextField}" id="pressureTextField"
+        style="height: 24px; left: 240px; top: 96px; position: absolute; width: 216px" value="1.0"/>
+    <h:commandButton action="#{Thermo$TempPresSetter.okFlashButton_action}" binding="#{Thermo$TempPresSetter.okFlashButton}" id="okFlashButton"
+        style="height: 24px; left: 240px; top: 168px; position: absolute; width: 96px" value="OK"/>
+</div>

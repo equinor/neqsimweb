@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div style="height: 300px; width: 200px; -rave-layout: grid" xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://www.sun.com/web/ui">
+    <f:subview id="ProcessEconomyMenuPage">
+        <ui:staticText binding="#{Economy$ProcessEconomyMenuPage.staticText1}" id="staticText1"
+            style="font-family: 'Times New Roman','Times',serif; font-size: 14px; font-weight: bold" text=" Menu"/>
+        <ui:hyperlink action="#{Economy$ProcessEconomyMenuPage.hyperlink2_action}" binding="#{Economy$ProcessEconomyMenuPage.hyperlink1}" id="hyperlink1"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 24px; position: absolute; text-decoration: underline; width: 214px"
+            styleClass="body-text-hyperlink-box" text="Main Menu"/>
+        <ui:hyperlink action="#{Economy$ProcessEconomyMenuPage.hyperlink1_action}" binding="#{Economy$ProcessEconomyMenuPage.hyperlink2}" id="hyperlink2"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 96px; position: absolute; text-decoration: underline; width: 214px" text="Thermo Calculator"/>
+        <ui:hyperlink action="#{Economy$ProcessEconomyMenuPage.hyperlink5_action}" binding="#{Economy$ProcessEconomyMenuPage.hyperlink5}" id="hyperlink5"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 120px; position: absolute; text-decoration: underline; width: 214px" text="Thermo Databasae"/>
+        <ui:hyperlink action="#{Economy$ProcessEconomyMenuPage.hyperlink6_action}" binding="#{Economy$ProcessEconomyMenuPage.hyperlink6}" id="hyperlink6"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 72px; position: absolute; text-decoration: underline; width: 214px" text="Thermo Documentation"/>
+    </f:subview>
+</div>

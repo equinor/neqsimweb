@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div style="height: 100px; width: 400px; -rave-layout: grid" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:ui="http://www.sun.com/web/ui">
+    <f:subview id="MainMenu">
+        <ui:imageHyperlink action="#{MainMenu.imageHyperlink1_action}" binding="#{MainMenu.imageHyperlink1}" height="24" id="imageHyperlink1"
+            style="color: blue; font-family: 'Times New Roman',Times,serif; font-size: 14px; left: 0px; top: 24px; position: absolute; text-decoration: underline"
+            text="Home" width="216"/>
+        <h:outputText binding="#{MainMenu.outputText1}" id="outputText1"
+            style="font-family: 'Times New Roman',Times,serif; font-size: 14px; font-weight: bold; height: 24px; left: 0px; top: 0px; position: absolute; width: 192px" value="Main Menu"/>
+        <h:outputLink binding="#{MainMenu.hyperlink1}" id="hyperlink1" style="left: 0px; top: 72px; position: absolute; width: 70px" value="/neqsimserver2/jforum">
+            <h:outputText binding="#{MainMenu.hyperlink1Text}" id="hyperlink1Text"
+                style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; left: 0px; top: 0px; position: absolute; text-decoration: underline; text-indent: 4px" value="Forum"/>
+        </h:outputLink>
+        <ui:hyperlink id="hyperlink2" style="left: 0px; top: 48px; position: absolute; text-decoration: underline; width: 72px" text="Wiki" url="http://129.241.62.72:8080/NeqSimWiki"/>
+    </f:subview>
+</div>

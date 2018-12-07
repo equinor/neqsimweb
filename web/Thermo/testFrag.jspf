@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!-- 
+    Document   : testFrag
+    Created on : 05.jan.2008, 01:44:21
+    Author     : ESOL
+-->
+<div style="-rave-layout: grid; width: 400px; height: 200px" xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://www.sun.com/web/ui">
+    <f:subview id="testFrag">
+        <ui:button binding="#{Thermo$testFrag.button1}" id="button1" style="position: absolute; left: 144px; top: 72px" text="#{Thermo$testFrag.cachedRowSetDataProvider1.value['litterature.ID']}"/>
+    </f:subview>
+</div>

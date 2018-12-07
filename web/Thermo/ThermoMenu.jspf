@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div style="height: 300px; width: 200px; -rave-layout: grid" xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://www.sun.com/web/ui">
+    <f:subview id="ThermoMenu">
+        <ui:staticText binding="#{Thermo$ThermoMenu.staticText1}" id="staticText1"
+            style="font-family: 'Times New Roman',Times,serif; font-size: 14px; font-weight: bold; left: 0px; top: 0px; position: absolute" text=" Menu"/>
+        <ui:hyperlink action="#{Thermo$ThermoMenu.hyperlink1_action}" binding="#{Thermo$ThermoMenu.hyperlink1}" id="hyperlink1"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 96px; position: absolute; text-decoration: underline; width: 214px" text="Thermo Calculator"/>
+        <ui:hyperlink action="#{Thermo$ThermoMenu.hyperlink2_action}" binding="#{Thermo$ThermoMenu.hyperlink2}" id="hyperlink2"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 24px; position: absolute; text-decoration: underline; width: 214px"
+            styleClass="body-text-hyperlink-box" text="Main Menu"/>
+        <ui:hyperlink action="#{Thermo$ThermoMenu.hyperlink3_action}" binding="#{Thermo$ThermoMenu.hyperlink3}" id="hyperlink3"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 168px; position: absolute; text-decoration: underline; width: 118px" text="1. Select Fluid  /"/>
+        <ui:hyperlink action="#{Thermo$ThermoMenu.hyperlink4_action}" binding="#{Thermo$ThermoMenu.hyperlink4}" id="hyperlink4"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 192px; position: absolute; text-decoration: underline; width: 214px" text="2. Select Operation"/>
+        <ui:hyperlink action="#{Thermo$ThermoMenu.hyperlink5_action}" binding="#{Thermo$ThermoMenu.hyperlink5}" id="hyperlink5"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 216px; position: absolute; text-decoration: underline; width: 214px" text="3. View Results"/>
+        <ui:hyperlink action="#{Thermo$ThermoMenu.serachLink_action}" binding="#{Thermo$ThermoMenu.serachLink}" id="serachLink"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 120px; position: absolute; text-decoration: underline; width: 214px" text="Thermo Database"/>
+        <ui:hyperlink action="#{Thermo$ThermoMenu.editHyperLink_action}" binding="#{Thermo$ThermoMenu.editHyperLink}" id="editHyperLink"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 96px; top: 168px; position: absolute; text-decoration: underline; width: 118px" text="Edit Fluid"/>
+        <ui:messageGroup binding="#{Thermo$ThermoMenu.messageGroup1}" id="messageGroup1" style="height: 24px; left: 0px; top: 288px; position: absolute; width: 192px"/>
+        <ui:hyperlink action="#{Thermo$ThermoMenu.hyperlink7_action}" id="hyperlink7"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 264px; position: absolute; text-decoration: underline; width: 214px" text="Fluid options"/>
+        <ui:hyperlink id="hyperlink8" style="color: blue; height: 24px; left: 0px; top: 72px; position: absolute; text-decoration: underline; width: 214px"
+            styleClass="body-text-hyperlink-box" text="Thermo Documentation" url="http://129.241.62.72:8080/NeqSimWiki/en/Thermodynamic_and_physical_properties" visible="false"/>
+    </f:subview>
+</div>

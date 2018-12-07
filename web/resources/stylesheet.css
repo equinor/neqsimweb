@@ -1,0 +1,110 @@
+.body {
+  background-color: white;
+  color: black
+}
+
+.title1{
+  font-family: 'Times New Roman','Times',serif;
+  font-size: 20pt;
+  color: black;
+}
+
+.body-text{
+  font-family: 'Times New Roman','Times',serif;
+  font-size: 12pt;
+  color: black;
+}
+
+.body-text-bold{
+  font-family: 'Times New Roman','Times',serif;
+  font-size: 12pt;
+  color: black;
+  font-weight: bold;
+}
+
+.body-text-hyperlink-box{
+  font-family: 'Times New Roman','Times',serif;
+  font-size: 12pt;
+  color: blue;
+  text-decoration: underline;
+}
+
+.body-text-hyperlink-box-inactive{
+  font-family: 'Times New Roman','Times',serif;
+  font-size: 12pt;
+  color: silver;
+}
+
+/* Style rules to make data tables look better */
+
+.list-header {
+  background-color: #eeeeee;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.list-paging-header {
+  text-align: center;
+}
+
+.list-paging-footer {
+  text-align: center;
+}
+
+.list-row-even { 
+    background-color: #eeeeee;
+}
+
+.list-row-odd { 
+    background-color: #eeeeee;
+}
+
+.textbox-normal{
+  height: 22px;
+  width: 120px;
+}
+
+/* Style rules for message severity levels */
+
+.infoMessage {
+  color: black;
+}
+
+.warnMessage {
+  color: orange;
+  font-weight: bold;
+}
+
+.errorMessage {
+  color: red;
+  font-weight: bold;
+}
+
+.fatalMessage {
+   color: red;
+   font-style: italic;
+   font-weight: bold
+}
+
+.table {
+    display: inline;
+}
+
+table {
+    width:100%;
+    empty-cells:show;
+    border-collapse:collapse;
+    padding:0px;
+    display: inline;
+}
+
+table.Tbl {
+    width:100%;
+    empty-cells:show;
+    border-collapse:collapse;
+    padding:0px;
+    display: inline;
+}
+
+
+

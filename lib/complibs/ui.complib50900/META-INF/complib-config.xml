@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+   Copyright 2006 Sun Microsystems, Inc.  All rights reserved.
+   You may not modify, use, reproduce, or distribute this
+   software except in compliance with the terms of the License at:
+  
+     http://developer.sun.com/berkeley_license.html
+  
+   $Id: complib-config.xml,v 1.18 2006/05/02 21:29:10 edwingo Exp $
+-->
+
+<complibConfiguration version="1.0"
+       resourceBundleBaseName="META-INF.complib-bundle">
+
+  <identifier>
+    <uri>http://www.sun.com/blueprints/ajax</uri>
+    <version>0.1</version>
+  </identifier>
+  <titleKey>titleKey</titleKey>
+  <runtimePath>
+    <pathElement>ui.jar</pathElement>
+    <pathElement>shale-remoting.jar</pathElement>
+  </runtimePath>
+  <designTimePath
+           prependRuntimePath="true">
+    <pathElement>ui-dt.jar</pathElement>
+  </designTimePath>
+  <javadocPath>
+    <pathElement>ui-doc.zip</pathElement>
+  </javadocPath>
+  <sourcePath>
+    <pathElement>ui-src.zip</pathElement>
+  </sourcePath>
+  <initialPalette>
+    <folder key="folder1Key">
+      <item         className="com.sun.j2ee.blueprints.ui.autocomplete.AutoCompleteComponent"/>
+      <item         className="com.sun.j2ee.blueprints.ui.mapviewer.MapComponent"/>
+      <item         className="com.sun.j2ee.blueprints.ui.progressbar.ProgressBarComponent"/>
+      <item         className="com.sun.j2ee.blueprints.ui.editor.RichTextareaEditorComponent"/>
+      <item         className="com.sun.j2ee.blueprints.ui.selectvalue.SelectValueComponent"/>
+      <item         className="com.sun.j2ee.blueprints.ui.shopping.BuyNowComponent"/>
+      <item         className="com.sun.j2ee.blueprints.ui.rating.RatingComponent"/>
+      <item         className="com.sun.j2ee.blueprints.ui.popupcalendar.PopupCalendarComponent"/>
+    </folder>
+    <folder key="folder2Key">
+      <item         className="com.sun.j2ee.blueprints.ui.geocoder.GeoCoder"/>
+      <item         className="com.sun.j2ee.blueprints.ui.geocoder.GeoPoint"/>
+      <item         className="com.sun.j2ee.blueprints.ui.mapviewer.MapMarker"/>
+      <item         className="com.sun.j2ee.blueprints.ui.mapviewer.MapPoint"/>
+      <item         className="com.sun.j2ee.blueprints.ui.shopping.BuyNowPostData"/>
+      <item         className="com.sun.j2ee.blueprints.ui.popupcalendar.SqlUtilDateConverter"/>
+    </folder>
+  </initialPalette>
+
+</complibConfiguration>

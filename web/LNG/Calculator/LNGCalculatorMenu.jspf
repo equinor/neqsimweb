@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div style="height: 300px; width: 200px; -rave-layout: grid" xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://www.sun.com/web/ui">
+    <f:subview id="LNGCalculatorMenu">
+        <ui:staticText binding="#{LNG$Calculator$ThermoMenu.staticText1}" id="staticText1"
+            style="font-family: 'Times New Roman',Times,serif; font-size: 14px; font-weight: bold; left: 0px; top: 0px; position: absolute" text=" Menu"/>
+        <ui:hyperlink action="#{LNG$Calculator$ThermoMenu.hyperlink1_action}" binding="#{LNG$Calculator$ThermoMenu.hyperlink1}" id="hyperlink1"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 96px; position: absolute; text-decoration: underline; width: 214px" text="LNG Calculator"/>
+        <ui:hyperlink action="#{LNG$Calculator$ThermoMenu.hyperlink2_action}" binding="#{LNG$Calculator$ThermoMenu.hyperlink2}" id="hyperlink2"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 24px; position: absolute; text-decoration: underline; width: 214px"
+            styleClass="body-text-hyperlink-box" text="Main Menu"/>
+        <ui:hyperlink action="#{LNG$Calculator$ThermoMenu.hyperlink3_action}" binding="#{LNG$Calculator$ThermoMenu.hyperlink3}" id="hyperlink3"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 168px; position: absolute; text-decoration: underline; width: 118px" text="1. Select Fluid  /"/>
+        <ui:hyperlink action="#{LNG$Calculator$ThermoMenu.hyperlink4_action}" binding="#{LNG$Calculator$ThermoMenu.hyperlink4}" id="hyperlink4"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 192px; position: absolute; text-decoration: underline; width: 214px" text="2. Select Operation"/>
+        <ui:hyperlink action="#{LNG$Calculator$ThermoMenu.hyperlink5_action}" binding="#{LNG$Calculator$ThermoMenu.hyperlink5}" id="hyperlink5"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 216px; position: absolute; text-decoration: underline; width: 214px" text="3. View Results"/>
+        <ui:hyperlink action="#{LNG$Calculator$ThermoMenu.serachLink_action}" binding="#{LNG$Calculator$ThermoMenu.serachLink}" id="serachLink"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 120px; position: absolute; text-decoration: underline; width: 214px" text="LNG Database"/>
+        <ui:hyperlink action="#{LNG$Calculator$ThermoMenu.hyperlink6_action}" binding="#{LNG$Calculator$ThermoMenu.hyperlink6}" id="hyperlink6"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 72px; position: absolute; text-decoration: underline; width: 214px" text="LNG Documentation"/>
+        <ui:hyperlink action="#{LNG$Calculator$ThermoMenu.editHyperLink_action}" binding="#{LNG$Calculator$ThermoMenu.editHyperLink}" id="editHyperLink"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 96px; top: 168px; position: absolute; text-decoration: underline; width: 118px" text="Edit Fluid"/>
+        <ui:messageGroup binding="#{LNG$Calculator$ThermoMenu.messageGroup1}" id="messageGroup1" style="height: 24px; left: 0px; top: 240px; position: absolute; width: 192px"/>
+    </f:subview>
+</div>

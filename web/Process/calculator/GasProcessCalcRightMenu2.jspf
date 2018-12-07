@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!-- 
+    Document   : GasProcessCalcRightMenu2
+    Created on : 02.jul.2009, 21:11:00
+    Author     : ESOL
+-->
+<div style="height: 200px; width: 220px; -rave-layout: grid" xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://www.sun.com/web/ui">
+    <f:subview id="GasProcessCalcRightMenu2">
+        <ui:staticText id="staticText1" style="font-family: 'Times New Roman','Times',serif; font-size: 14px; font-weight: bold; width: 216px" text=" Calculation Menu"/>
+        <ui:hyperlink action="#{Process$calculator$GasProcessCalcRightMenu2.hyperlink3_action}" id="hyperlink1"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 24px; position: absolute; text-decoration: underline; width: 94px" text="1. Select Fluid /"/>
+        <ui:hyperlink action="#{Process$calculator$GasProcessCalcRightMenu2.hyperlink6_action}" id="hyperlink2"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 72px; position: absolute; text-decoration: underline; width: 214px" text="3. View Results"/>
+        <ui:hyperlink action="#{Process$calculator$GasProcessCalcRightMenu2.editHyperLink_action}" id="editHyperLink1"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 96px; top: 24px; position: absolute; text-decoration: underline; width: 118px"
+            styleClass="body-text-hyperlink-box" text="Edit Fluid"/>
+        <ui:hyperlink action="#{Process$calculator$GasProcessCalcRightMenu2.hyperlink4_action}" id="hyperlink4"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 48px; position: absolute; text-decoration: underline; width: 214px" text="2. Operations"/>
+        <ui:hyperlink action="#{Process$calculator$GasProcessCalcRightMenu2.hyperlinkOptions_action}" id="hyperlinkOptions"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 120px; position: absolute; text-decoration: underline; width: 214px" text="Process Options"/>
+    </f:subview>
+</div>

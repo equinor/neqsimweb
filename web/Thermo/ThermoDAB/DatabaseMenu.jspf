@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div style="height: 300px; width: 200px; -rave-layout: grid" xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://www.sun.com/web/ui">
+    <f:subview id="DatabaseMenu">
+        <ui:staticText binding="#{Thermo$ThermoDAB$DatabaseMenu.staticText1}" id="staticText1"
+            style="font-family: 'Times New Roman','Times',serif; font-size: 14px; font-weight: bold" text=" Menu"/>
+        <ui:hyperlink action="#{Thermo$ThermoDAB$DatabaseMenu.hyperlink2_action}" binding="#{Thermo$ThermoDAB$DatabaseMenu.hyperlink1}" id="hyperlink1"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 24px; position: absolute; text-decoration: underline; width: 214px"
+            styleClass="body-text-hyperlink-box" text="Main Menu"/>
+        <ui:hyperlink action="#{Thermo$ThermoDAB$DatabaseMenu.hyperlink3_action}" binding="#{Thermo$ThermoDAB$DatabaseMenu.hyperlink2}" id="hyperlink2"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 96px; position: absolute; text-decoration: underline; width: 214px" text="Thermo Calculator"/>
+        <ui:hyperlink action="#{Thermo$ThermoDAB$DatabaseMenu.hyperlink1_action}" binding="#{Thermo$ThermoDAB$DatabaseMenu.hyperlink3}" id="hyperlink3"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 168px; position: absolute; text-decoration: underline; width: 214px" text="1. Search Database"/>
+        <ui:hyperlink action="#{Thermo$ThermoDAB$DatabaseMenu.hyperlink4_action}" binding="#{Thermo$ThermoDAB$DatabaseMenu.hyperlink4}" id="hyperlink4"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 192px; position: absolute; text-decoration: underline; width: 214px" text="2. Add/Delete data"/>
+        <ui:hyperlink action="#{Thermo$ThermoDAB$DatabaseMenu.hyperlink1_action}" binding="#{Thermo$ThermoDAB$DatabaseMenu.hyperlink5}" id="hyperlink5"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 120px; position: absolute; text-decoration: underline; width: 214px" text="Thermo Databasae"/>
+        <ui:hyperlink action="#{Thermo$ThermoDAB$DatabaseMenu.hyperlink6_action}" binding="#{Thermo$ThermoDAB$DatabaseMenu.hyperlink6}" id="hyperlink6"
+            style="color: blue; font-family: 'Times New Roman','Times',serif; font-size: 14px; height: 24px; left: 0px; top: 72px; position: absolute; text-decoration: underline; width: 214px" text="Thermo Documentation"/>
+    </f:subview>
+</div>
