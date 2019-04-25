@@ -771,7 +771,7 @@ public class TemperaturePressureSelector extends AbstractPageBean {
 
 
 
-    private thermo.system.SystemInterface thermoSystem = new  thermo.system.SystemSrkEos(290.0, 3.0);
+    private neqsim.thermo.system.SystemInterface thermoSystem = new  neqsim.thermo.system.SystemSrkEos(290.0, 3.0);
 
 
 
@@ -835,7 +835,7 @@ public class TemperaturePressureSelector extends AbstractPageBean {
 
 
 
-    private thermodynamicOperations.ThermodynamicOperations  thermoOps = new thermodynamicOperations.ThermodynamicOperations(thermoSystem);
+    private neqsim.thermodynamicOperations.ThermodynamicOperations  thermoOps = new neqsim.thermodynamicOperations.ThermodynamicOperations(thermoSystem);
 
 
 

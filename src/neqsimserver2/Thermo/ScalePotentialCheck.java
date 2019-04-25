@@ -426,7 +426,7 @@ public class ScalePotentialCheck extends AbstractPageBean {
         // case name where null will return to the same page.
         getThermo$ThermoSessionBean().getThermoSystem().setTemperature(java.lang.Double.parseDouble(getTemperatureTextField().getValue().toString())+273.15);
         getThermo$ThermoSessionBean().getThermoSystem().setPressure(java.lang.Double.parseDouble(getPressureTextField().getValue().toString()));
-        thermodynamicOperations.ThermodynamicOperations ops = new  thermodynamicOperations.ThermodynamicOperations(getThermo$ThermoSessionBean().getThermoSystem());
+        neqsim.thermodynamicOperations.ThermodynamicOperations ops = new  neqsim.thermodynamicOperations.ThermodynamicOperations(getThermo$ThermoSessionBean().getThermoSystem());
         getThermo$ThermoSessionBean().setThermodynamicOperation(ops);
         try{
             ops.TPflash();

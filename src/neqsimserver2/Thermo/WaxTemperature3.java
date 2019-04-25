@@ -191,7 +191,7 @@ public class WaxTemperature3 extends AbstractPageBean {
             getThermo$ThermoSessionBean().getThermoSystem().setTemperature(273.15);
             getThermo$ThermoSessionBean().getThermoSystem().setPressure(java.lang.Double.parseDouble(getPressureTextInputField().getValue().toString()));
 
-            thermodynamicOperations.ThermodynamicOperations ops = new thermodynamicOperations.ThermodynamicOperations(getThermo$ThermoSessionBean().getThermoSystem());
+            neqsim.thermodynamicOperations.ThermodynamicOperations ops = new neqsim.thermodynamicOperations.ThermodynamicOperations(getThermo$ThermoSessionBean().getThermoSystem());
             try {
                 ops.calcWAT();
 

@@ -4,7 +4,7 @@
  */
 package neqsimserver2.Thermo;
 
-import PVTsimulation.util.parameterfitting.SaturationPressureFunction;
+import neqsim.PVTsimulation.util.parameterfitting.SaturationPressureFunction;
 import com.sun.data.provider.RowKey;
 import com.sun.data.provider.impl.CachedRowSetDataProvider;
 import com.sun.rave.web.ui.appbase.AbstractPageBean;
@@ -16,9 +16,9 @@ import javax.faces.FacesException;
 import neqsimserver2.ApplicationBean1;
 import neqsimserver2.SessionBean1;
 import neqsimserver2.GasQuality.GasQualitySessionBean;
-import statistics.parameterFitting.SampleSet;
-import statistics.parameterFitting.SampleValue;
-import statistics.parameterFitting.nonLinearParameterFitting.LevenbergMarquardt;
+import neqsim.statistics.parameterFitting.SampleSet;
+import neqsim.statistics.parameterFitting.SampleValue;
+import neqsim.statistics.parameterFitting.nonLinearParameterFitting.LevenbergMarquardt;
 
 /**
  * <p>Page bean that corresponds to a similarly named JSP page.  This

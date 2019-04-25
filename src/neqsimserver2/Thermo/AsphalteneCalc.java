@@ -412,7 +412,7 @@ public class AsphalteneCalc extends AbstractPageBean {
         getThermo$ThermoSessionBean().getThermoSystem().initPhysicalProperties();
         calculatedDensityTextField.setValue(decFormat.format(getThermo$ThermoSessionBean().getThermoSystem().getPhase(1).getPhysicalProperties().getDensity()));
         
-        thermodynamicOperations.ThermodynamicOperations ops = new  thermodynamicOperations.ThermodynamicOperations(getThermo$ThermoSessionBean().getThermoSystem());
+        neqsim.thermodynamicOperations.ThermodynamicOperations ops = new  neqsim.thermodynamicOperations.ThermodynamicOperations(getThermo$ThermoSessionBean().getThermoSystem());
         
         double presDiff = 0.0;
         double bubpres = 0.0;

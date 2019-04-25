@@ -16,8 +16,8 @@ import neqsimserver2.GasQuality.GasQualitySessionBean;
 import neqsimserver2.SessionBean1;
 import neqsimserver2.Thermo.ThermoSessionBean;
 import neqsimserver2.ApplicationBean1;
-import standards.StandardInterface;
-import standards.gasQuality.Standard_ISO6578;
+import neqsim.standards.StandardInterface;
+import neqsim.standards.gasQuality.Standard_ISO6578;
 
 /**
  * <p>Page bean that corresponds to a similarly named JSP page.  This
@@ -260,4 +260,5 @@ public class LNGDensity2 extends AbstractPageBean {
         return null;
     }
 }
+
 

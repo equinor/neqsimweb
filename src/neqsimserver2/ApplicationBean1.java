@@ -41,7 +41,7 @@ public class ApplicationBean1 extends AbstractApplicationBean {
         try {
             javax.naming.InitialContext ctx = new javax.naming.InitialContext();
             ds = (javax.sql.DataSource) ctx.lookup(
-                    "java:comp/env/jdbc/neqsimdatabase_MySQL");
+                    "java:comp/env/jdbc/NeqsimDataSource");
             conn = ds.getConnection();
             // setup the connection
             conn.setAutoCommit(false);
@@ -92,7 +92,7 @@ public class ApplicationBean1 extends AbstractApplicationBean {
         try {
             javax.naming.InitialContext ctx = new javax.naming.InitialContext();
             ds = (javax.sql.DataSource) ctx.lookup(
-                    "java:comp/env/jdbc/neqsimdatabase_MySQL");
+                    "java:comp/env/jdbc/NeqsimDataSource");
             conn = ds.getConnection();
             // setup the connection
             conn.setAutoCommit(false);

@@ -522,7 +522,7 @@ public class ISOgerg2004 extends AbstractPageBean {
         getThermo$ThermoSessionBean().getThermoSystem().setPressure(Double.parseDouble(pressureTextField.getValue().toString()));
         getThermo$ThermoSessionBean().getThermoSystem().setTemperature(273.15+Double.parseDouble(temperatureTextField.getValue().toString()));
         
-        getThermo$ThermoSessionBean().setISOstandard(new standards.gasQuality.Draft_GERG2004(getThermo$ThermoSessionBean().getThermoSystem()));
+        getThermo$ThermoSessionBean().setISOstandard(new neqsim.standards.gasQuality.Draft_GERG2004(getThermo$ThermoSessionBean().getThermoSystem()));
         getThermo$ThermoSessionBean().getISOstandard().calculate();
         getThermo$ThermoSessionBean().getISOstandard().createTable("GERG 2004 EOS");
         //getThermo$ThermoSessionBean().getISOstandard().display("tes");

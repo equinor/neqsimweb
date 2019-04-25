@@ -21,7 +21,7 @@ import com.sun.rave.web.ui.component.DropDown;
 import com.sun.rave.web.ui.component.StaticText;
 import com.sun.rave.web.ui.component.Button;
 import javax.faces.event.ValueChangeEvent;
-import standards.salesContract.BaseContract;
+import neqsim.standards.salesContract.BaseContract;
 
 /**
  * <p>Page bean that corresponds to a similarly named JSP page.  This

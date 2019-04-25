@@ -381,7 +381,7 @@ public class BubblePoint2 extends AbstractPageBean {
             getThermo$ThermoSessionBean().getThermoSystem().setTemperature(273.15 + java.lang.Double.parseDouble(getTemperatureTextInputField().getValue().toString()));
             getThermo$ThermoSessionBean().getThermoSystem().setPressure(java.lang.Double.parseDouble(getPressureTextInputField().getValue().toString()));
 
-            thermodynamicOperations.ThermodynamicOperations ops = new thermodynamicOperations.ThermodynamicOperations(getThermo$ThermoSessionBean().getThermoSystem());
+            neqsim.thermodynamicOperations.ThermodynamicOperations ops = new neqsim.thermodynamicOperations.ThermodynamicOperations(getThermo$ThermoSessionBean().getThermoSystem());
             try {
                 if (calcuationRadioButtonGroup.getValue().toString().equals("bubt")) {//(bubPointTCheckBox.isSelected()) {
                     ops.bubblePointTemperatureFlash();

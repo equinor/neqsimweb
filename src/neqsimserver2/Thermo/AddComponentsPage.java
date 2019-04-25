@@ -2691,7 +2691,7 @@ public class AddComponentsPage extends AbstractPageBean {
 
             getThermo$ThermoSessionBean().resetThermoSystem();
 
-            thermo.system.SystemInterface thermoSystem = getThermo$ThermoSessionBean().getThermoSystem();
+            neqsim.thermo.system.SystemInterface thermoSystem = getThermo$ThermoSessionBean().getThermoSystem();
 
 
             if (java.lang.Double.parseDouble(getNitrogenTextField1().getValue().toString()) > 1.0E-50) {

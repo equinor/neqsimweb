@@ -22,7 +22,7 @@ import com.sun.rave.web.ui.component.StaticText;
 import com.sun.rave.web.ui.component.MessageGroup;
 import com.sun.rave.web.ui.component.Checkbox;
 import javax.faces.validator.DoubleRangeValidator;
-import thermo.component.ComponentHydrate;
+import neqsim.thermo.component.ComponentHydrate;
 
 /**
  * <p>Page bean that corresponds to a similarly named JSP page.  This
@@ -392,7 +392,7 @@ public class DewPoint2 extends AbstractPageBean {
             error("Water must be present in system to perform calculations. Hydrates won't form. Please add water to the system.");
             return null;
         }
-        thermodynamicOperations.ThermodynamicOperations ops = new thermodynamicOperations.ThermodynamicOperations(getThermo$ThermoSessionBean().getThermoSystem());
+        neqsim.thermodynamicOperations.ThermodynamicOperations ops = new neqsim.thermodynamicOperations.ThermodynamicOperations(getThermo$ThermoSessionBean().getThermoSystem());
         double lowTemp = 0.0;
 
         java.text.DecimalFormat decFormat = new java.text.DecimalFormat();

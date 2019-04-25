@@ -286,7 +286,7 @@ public class DewPoint extends AbstractPageBean {
 		getThermo$ThermoSessionBean().getThermoSystem().setPressure(
 				java.lang.Double.parseDouble(getPressureTextInputField().getValue().toString()));
 
-		thermodynamicOperations.ThermodynamicOperations ops = new thermodynamicOperations.ThermodynamicOperations(
+		neqsim.thermodynamicOperations.ThermodynamicOperations ops = new neqsim.thermodynamicOperations.ThermodynamicOperations(
 				getThermo$ThermoSessionBean().getThermoSystem());
 
 		try {

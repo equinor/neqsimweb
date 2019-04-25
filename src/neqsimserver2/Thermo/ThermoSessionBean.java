@@ -10,18 +10,18 @@ package neqsimserver2.Thermo;
 import com.sun.sql.rowset.CachedRowSetXImpl;
 import javax.faces.FacesException;
 import neqsimserver2.ApplicationBean1;
-import thermo.system.*;
-import fluidMechanics.flowSystem.twoPhaseFlowSystem.shipSystem.LNGship;
+import neqsim.thermo.system.*;
+import neqsim.fluidMechanics.flowSystem.twoPhaseFlowSystem.shipSystem.LNGship;
 import com.sun.rave.web.ui.appbase.AbstractSessionBean;
 
 public class ThermoSessionBean extends AbstractSessionBean {
     // <editor-fold defaultstate="collapsed" desc="Creator-managed Component Definition">
 
     private int __placeholder;
-    private thermo.system.SystemInterface thermoSystem = new thermo.system.SystemSrkEos();
-    private standards.StandardInterface ISOstandard = new standards.gasQuality.Standard_ISO6976(thermoSystem);
-    private standards.salesContract.BaseContract salesContract = new standards.salesContract.BaseContract(thermoSystem);
-    private thermodynamicOperations.ThermodynamicOperations thermodynamicOperation = new thermodynamicOperations.ThermodynamicOperations(thermoSystem);
+    private neqsim.thermo.system.SystemInterface thermoSystem = new neqsim.thermo.system.SystemSrkEos();
+    private neqsim.standards.StandardInterface ISOstandard = new neqsim.standards.gasQuality.Standard_ISO6976(thermoSystem);
+    private neqsim.standards.salesContract.BaseContract salesContract = new neqsim.standards.salesContract.BaseContract();
+    private neqsim.thermodynamicOperations.ThermodynamicOperations thermodynamicOperation = new neqsim.thermodynamicOperations.ThermodynamicOperations(thermoSystem);
     boolean displayGraph = false;
     boolean displayData = true;
     private LNGship LNGship = null;
@@ -37,9 +37,9 @@ public class ThermoSessionBean extends AbstractSessionBean {
         }
         // </editor-fold>
         // Additional user provided initialization code
-        thermoSystem = new thermo.system.SystemSrkEos();
-        setThermodynamicOperation(new thermodynamicOperations.ThermodynamicOperations(thermoSystem));
-        ISOstandard = new standards.gasQuality.Standard_ISO6976(thermoSystem);
+        thermoSystem = new neqsim.thermo.system.SystemSrkEos();
+        setThermodynamicOperation(new neqsim.thermodynamicOperations.ThermodynamicOperations(thermoSystem));
+        ISOstandard = new neqsim.standards.gasQuality.Standard_ISO6976(thermoSystem);
     }
 
     private void _init() throws Exception {
@@ -65,13 +65,13 @@ public class ThermoSessionBean extends AbstractSessionBean {
     }
 
     public void createEmptySystem() {
-        thermoSystem = new thermo.system.SystemSrkEos();
+        thermoSystem = new neqsim.thermo.system.SystemSrkEos();
     }
 
     public void addThermoSystem(int systemID) {
         try {
             CachedRowSetXImpl thermoSystemRowSet = new CachedRowSetXImpl();
-            thermoSystemRowSet.setDataSourceName("java:comp/env/jdbc/neqsimdatabase_MySQL");
+            thermoSystemRowSet.setDataSourceName("java:comp/env/jdbc/NeqsimDataSource");
 
             thermoSystemRowSet.setCommand("SELECT ALL fluidinfo.`ID`, fluidinfo.`FIELD`, fluidinfo.`WELL`, fluidinfo.`TEST`, fluidinfo.`SAMPLE`, fluidinfo.`TEXT`, fluidinfo.`HISTORY`, fluidinfo.`METHANE`, fluidinfo.`ETHANE`, fluidinfo.`PROPANE`, fluidinfo.`WATER`, fluidinfo.`USERID`, userdb.`ID`, userdb.`USERNAME`, userdb.`PASSWORD`, userdb.`EMAIL`, userdb.`FORNAME`, userdb.`SURENAME`, fluidinfo.`CO2`, fluidinfo.`H2S`, fluidinfo.`NITROGEN`, fluidinfo.`IBUTANE`, fluidinfo.`NBUTANE`, fluidinfo.`PENTANE`, fluidinfo.`NHEXANE`, fluidinfo.`CYCPENTANE`, fluidinfo.`CYCHEXANE`, fluidinfo.`NHEPTANE`, fluidinfo.`NOCTANE`, fluidinfo.`NDECANE`, fluidinfo.`BENZENE`, fluidinfo.`TOLUENE`, fluidinfo.`MXYLENE`, fluidinfo.`PXYLENE`, fluidinfo.`TEG`, fluidinfo.`DEG`, fluidinfo.`MDEA`, fluidinfo.`PIPERAZINE`, fluidinfo.`ACETICACID`, fluidinfo.`PROPIONICACID`, fluidinfo.`NAPLUS`, fluidinfo.`FEPLUS`, fluidinfo.`CAPLUS`, fluidinfo.`MEG`, fluidinfo.`METHANOL`, fluidinfo.`OXYLENE`, fluidinfo.`NNONANE`, fluidinfo.`H3OPLUS`, fluidinfo.`OHMINUS`, fluidinfo.`CO3MINUS`, fluidinfo.`CLMINUS`, fluidinfo.`CPLUSDENSITY`, fluidinfo.`CPLUSMOLARMASS`, fluidinfo.`CPLUS`, fluidinfo.`C13DENSITY`, fluidinfo.`C13MOLARMASS`, fluidinfo.`C13`, fluidinfo.`C12DENSITY`, fluidinfo.`C12MOLARMASS`, fluidinfo.`C12`, fluidinfo.`C11DENSITY`, fluidinfo.`C11MOLARMASS`, fluidinfo.`C11`, fluidinfo.`C10DENSITY`, fluidinfo.`C10MOLARMASS`, fluidinfo.`C10`, fluidinfo.`C9DENSITY`, fluidinfo.`C9MOLARMASS`, fluidinfo.`C9`, fluidinfo.`C8DENSITY`, fluidinfo.`C8MOLARMASS`, fluidinfo.`C8`, fluidinfo.`C7DENSITY`, fluidinfo.`C7MOLARMASS`, fluidinfo.`C7`, fluidinfo.`C6DENSITY`, fluidinfo.`C6MOLARMASS`, fluidinfo.`C6`, fluidinfo.`SHARED`, fluidinfo.`C20DENSITY`, fluidinfo.`C19DENSITY`, fluidinfo.`HASPLUSFRACTION`, fluidinfo.`C18DENSITY`, fluidinfo.`C17DENSITY`, fluidinfo.`C16DENSITY`, fluidinfo.`C15DENSITY`, fluidinfo.`C14DENSITY`, fluidinfo.`C20MOLARMASS`, fluidinfo.`C19MOLARMASS`, fluidinfo.`C18MOLARMASS`, fluidinfo.`C17MOLARMASS`, fluidinfo.`C16MOLARMASS`, fluidinfo.`C15MOLARMASS`, fluidinfo.`C14MOLARMASS`, fluidinfo.`C20`, fluidinfo.`C19`, fluidinfo.`C18`, fluidinfo.`C17`, fluidinfo.`C16`, fluidinfo.`C15`, fluidinfo.`C14`, fluidinfo.`SO4MINUS`, fluidinfo.`iPENTANE`  FROM fluidinfo, userdb WHERE fluidinfo.`ID` = " + systemID);
             thermoSystemRowSet.setTableName("thermoSystemRowSet");
@@ -141,7 +141,7 @@ public class ThermoSessionBean extends AbstractSessionBean {
     }
 
     public void resetThermoSystem() {
-        this.thermoSystem = new thermo.system.SystemSrkEos();
+        this.thermoSystem = new neqsim.thermo.system.SystemSrkEos();
     }
 
     /**
@@ -156,7 +156,7 @@ public class ThermoSessionBean extends AbstractSessionBean {
      * Getter for property ISOstandard.
      * @return Value of property ISOstandard.
      */
-    public standards.StandardInterface getISOstandard() {
+    public neqsim.standards.StandardInterface getISOstandard() {
         return ISOstandard;
     }
 
@@ -164,7 +164,7 @@ public class ThermoSessionBean extends AbstractSessionBean {
      * Setter for property ISOstandard.
      * @param ISOstandard New value of property ISOstandard.
      */
-    public void setISOstandard(standards.StandardInterface ISOstandard) {
+    public void setISOstandard(neqsim.standards.StandardInterface ISOstandard) {
         this.ISOstandard = ISOstandard;
     }
 
@@ -229,7 +229,7 @@ public class ThermoSessionBean extends AbstractSessionBean {
      * Getter for property thermodynamicOperation.
      * @return Value of property thermodynamicOperation.
      */
-    public thermodynamicOperations.ThermodynamicOperations getThermodynamicOperation() {
+    public neqsim.thermodynamicOperations.ThermodynamicOperations getThermodynamicOperation() {
 
         return this.thermodynamicOperation;
     }
@@ -238,7 +238,7 @@ public class ThermoSessionBean extends AbstractSessionBean {
      * Setter for property thermodynamicOperation.
      * @param thermodynamicOperation New value of property thermodynamicOperation.
      */
-    public void setThermodynamicOperation(thermodynamicOperations.ThermodynamicOperations thermodynamicOperation) {
+    public void setThermodynamicOperation(neqsim.thermodynamicOperations.ThermodynamicOperations thermodynamicOperation) {
 
         this.thermodynamicOperation = thermodynamicOperation;
     }
@@ -260,14 +260,14 @@ public class ThermoSessionBean extends AbstractSessionBean {
     /**
      * @return the salesContract
      */
-    public standards.salesContract.BaseContract getSalesContract() {
+    public neqsim.standards.salesContract.BaseContract getSalesContract() {
         return salesContract;
     }
 
     /**
      * @param salesContract the salesContract to set
      */
-    public void setSalesContract(standards.salesContract.BaseContract salesContract) {
+    public void setSalesContract(neqsim.standards.salesContract.BaseContract salesContract) {
         this.salesContract = salesContract;
     }
 

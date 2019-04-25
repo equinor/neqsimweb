@@ -899,7 +899,7 @@ public class ComponentSelector_3 extends AbstractPageBean {
 
 
 
-    private thermo.system.SystemInterface thermoSystem = new  thermo.system.SystemSrkEos(290.0, 3.0);
+    private neqsim.thermo.system.SystemInterface thermoSystem = new  neqsim.thermo.system.SystemSrkEos(290.0, 3.0);
 
 
 
@@ -963,7 +963,7 @@ public class ComponentSelector_3 extends AbstractPageBean {
 
 
 
-    private thermodynamicOperations.ThermodynamicOperations  thermoOps = new thermodynamicOperations.ThermodynamicOperations(thermoSystem);
+    private neqsim.thermodynamicOperations.ThermodynamicOperations  thermoOps = new neqsim.thermodynamicOperations.ThermodynamicOperations(thermoSystem);
 
 
 
@@ -21584,7 +21584,7 @@ public class ComponentSelector_3 extends AbstractPageBean {
 
 
 
-            thermoOps = new thermodynamicOperations.ThermodynamicOperations(thermoSystem);
+            thermoOps = new neqsim.thermodynamicOperations.ThermodynamicOperations(thermoSystem);
 
 
 

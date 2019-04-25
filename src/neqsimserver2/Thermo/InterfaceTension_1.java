@@ -187,7 +187,7 @@ public class InterfaceTension_1 extends AbstractPageBean {
         getThermo$ThermoSessionBean().getThermoSystem().setPressure(java.lang.Double.parseDouble(getPressureTextField().getValue().toString()));
         getThermo$ThermoSessionBean().getThermoSystem().init(0);
         getThermo$ThermoSessionBean().getThermoSystem().getInterphaseProperties().setInterfacialTensionModel(4);
-        thermodynamicOperations.ThermodynamicOperations ops = new thermodynamicOperations.ThermodynamicOperations(getThermo$ThermoSessionBean().getThermoSystem());
+        neqsim.thermodynamicOperations.ThermodynamicOperations ops = new neqsim.thermodynamicOperations.ThermodynamicOperations(getThermo$ThermoSessionBean().getThermoSystem());
         try {
             ops.TPflash();
         } catch (Exception e) {

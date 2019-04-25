@@ -92,7 +92,7 @@ public class DisplayDocument  extends HttpServlet {
     private void readLitID(){
          try {
             Context initContext = new InitialContext();
-            DataSource ds = (DataSource)initContext.lookup("jdbc/neqsimdatabase_MySQL");
+            DataSource ds = (DataSource)initContext.lookup("jdbc/NeqsimDataSource");
             Connection conn = ds.getConnection();
             
             Statement sta=null;
@@ -126,7 +126,7 @@ public class DisplayDocument  extends HttpServlet {
         
         try {
             Context initContext = new InitialContext();
-            DataSource ds = (DataSource)initContext.lookup("jdbc/neqsimdatabase_MySQL");
+            DataSource ds = (DataSource)initContext.lookup("jdbc/NeqsimDataSource");
             Connection conn = ds.getConnection();
             
             sta = conn.createStatement();

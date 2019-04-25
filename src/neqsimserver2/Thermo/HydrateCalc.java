@@ -21,7 +21,7 @@ import javax.faces.component.html.HtmlInputText;
 import com.sun.rave.web.ui.component.Button;
 import com.sun.rave.web.ui.component.StaticText;
 import com.sun.rave.web.ui.component.MessageGroup;
-import thermo.component.ComponentHydrate;
+import neqsim.thermo.component.ComponentHydrate;
 
 /**
  * <p>Page bean that corresponds to a similarly named JSP page.  This
@@ -321,7 +321,7 @@ public class HydrateCalc extends AbstractPageBean {
             error("Water must be present in system to perform calculations. Hydrates won't form. Please add water to the system.");
             return null;
         }
-        thermodynamicOperations.ThermodynamicOperations ops = new thermodynamicOperations.ThermodynamicOperations(getThermo$ThermoSessionBean().getThermoSystem());
+        neqsim.thermodynamicOperations.ThermodynamicOperations ops = new neqsim.thermodynamicOperations.ThermodynamicOperations(getThermo$ThermoSessionBean().getThermoSystem());
 
         java.text.DecimalFormat decFormat = new java.text.DecimalFormat();
         decFormat.setMaximumFractionDigits(4);

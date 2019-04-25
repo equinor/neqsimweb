@@ -339,8 +339,8 @@ public class PipeLine extends AbstractPageBean {
         getThermo$ThermoSessionBean().getThermoSystem().setTemperature((Double) temperatureTextField.getValue() + 273.15);
         getThermo$ThermoSessionBean().getThermoSystem().setPressure((Double) pressureTextField1.getValue());
         getThermo$ThermoSessionBean().getThermoSystem().initPhysicalProperties();
-        processSimulation.processEquipment.stream.Stream tempStream = new processSimulation.processEquipment.stream.Stream(getThermo$ThermoSessionBean().getThermoSystem());
-        processSimulation.processEquipment.pipeline.OnePhasePipeLine pipeLine = new processSimulation.processEquipment.pipeline.OnePhasePipeLine(tempStream);
+        neqsim.processSimulation.processEquipment.stream.Stream tempStream = new neqsim.processSimulation.processEquipment.stream.Stream(getThermo$ThermoSessionBean().getThermoSystem());
+        neqsim.processSimulation.processEquipment.pipeline.OnePhasePipeLine pipeLine = new neqsim.processSimulation.processEquipment.pipeline.OnePhasePipeLine(tempStream);
         pipeLine.setNumberOfLegs(numberOfRows - 1);
         pipeLine.setPipeDiameters(diameters);
         pipeLine.setLegPositions(positions);

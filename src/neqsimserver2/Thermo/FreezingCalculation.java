@@ -258,7 +258,7 @@ public class FreezingCalculation extends AbstractPageBean {
         getThermo$ThermoSessionBean().getThermoSystem().setPressure(
                 java.lang.Double.parseDouble(getPressureTextFIeld().getValue().toString()));
 
-        thermodynamicOperations.ThermodynamicOperations ops = new thermodynamicOperations.ThermodynamicOperations(getThermo$ThermoSessionBean().getThermoSystem());
+        neqsim.thermodynamicOperations.ThermodynamicOperations ops = new neqsim.thermodynamicOperations.ThermodynamicOperations(getThermo$ThermoSessionBean().getThermoSystem());
 
         try {
             if (compName.equals("natural gas hydrate")) {

@@ -234,7 +234,7 @@ public class FluidOptions extends AbstractPageBean {
     public String button1_action() {
         // TODO: Process the button click action. Return value is a navigation
         // case name where null will return to the same page.
-        thermo.system.SystemInterface thermoSystem = getThermo$ThermoSessionBean().getThermoSystem();
+        neqsim.thermo.system.SystemInterface thermoSystem = getThermo$ThermoSessionBean().getThermoSystem();
 
         try {
             Object[] objects = (Object[]) capeOpenListBox.getSelected();

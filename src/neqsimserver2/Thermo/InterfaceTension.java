@@ -207,7 +207,7 @@ public class InterfaceTension extends AbstractPageBean {
         getThermo$ThermoSessionBean().getThermoSystem().init(0);
         if(useGradientTheoryCheckbox.isChecked()) getThermo$ThermoSessionBean().getThermoSystem().getInterphaseProperties().setInterfacialTensionModel(1);
         else getThermo$ThermoSessionBean().getThermoSystem().getInterphaseProperties().setInterfacialTensionModel(0);
-        thermodynamicOperations.ThermodynamicOperations ops = new thermodynamicOperations.ThermodynamicOperations(getThermo$ThermoSessionBean().getThermoSystem());
+        neqsim.thermodynamicOperations.ThermodynamicOperations ops = new neqsim.thermodynamicOperations.ThermodynamicOperations(getThermo$ThermoSessionBean().getThermoSystem());
         java.text.DecimalFormat decFormat = new java.text.DecimalFormat();
         decFormat.setMaximumFractionDigits(3);
         try {

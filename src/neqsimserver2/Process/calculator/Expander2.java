@@ -261,8 +261,8 @@ public class Expander2 extends AbstractPageBean {
         getThermo$ThermoSessionBean().getThermoSystem().init(1);
         getThermo$ThermoSessionBean().getThermoSystem().setTemperature((Double) temperatureTextField.getValue() + 273.15);
         getThermo$ThermoSessionBean().getThermoSystem().setPressure((Double) pressureTextField.getValue());
-        processSimulation.processEquipment.stream.Stream tempStream = new processSimulation.processEquipment.stream.Stream(getThermo$ThermoSessionBean().getThermoSystem());
-        processSimulation.processEquipment.compressor.Compressor compProcess = new processSimulation.processEquipment.compressor.Compressor("compressor", tempStream);
+        neqsim.processSimulation.processEquipment.stream.Stream tempStream = new neqsim.processSimulation.processEquipment.stream.Stream(getThermo$ThermoSessionBean().getThermoSystem());
+        neqsim.processSimulation.processEquipment.compressor.Compressor compProcess = new neqsim.processSimulation.processEquipment.compressor.Compressor("compressor", tempStream);
         compProcess.setOutletPressure((Double) pressureOutTextField.getValue());
         compProcess.setUsePolytropicCalc(efficiencyTypeDropDown.getValue().equals("Polytropic"));
         compProcess.setPolytropicEfficiency((Double) isentropicTextField.getValue());
@@ -287,8 +287,8 @@ public class Expander2 extends AbstractPageBean {
         getThermo$ThermoSessionBean().getThermoSystem().init(1);
         getThermo$ThermoSessionBean().getThermoSystem().setTemperature((Double) temperatureTextField.getValue() + 273.15);
         getThermo$ThermoSessionBean().getThermoSystem().setPressure((Double) pressureTextField.getValue());
-        processSimulation.processEquipment.stream.Stream tempStream = new processSimulation.processEquipment.stream.Stream(getThermo$ThermoSessionBean().getThermoSystem());
-        processSimulation.processEquipment.compressor.Compressor compProcess = new processSimulation.processEquipment.compressor.Compressor("compressor", tempStream);
+        neqsim.processSimulation.processEquipment.stream.Stream tempStream = new neqsim.processSimulation.processEquipment.stream.Stream(getThermo$ThermoSessionBean().getThermoSystem());
+        neqsim.processSimulation.processEquipment.compressor.Compressor compProcess = new neqsim.processSimulation.processEquipment.compressor.Compressor("compressor", tempStream);
         compProcess.setOutletPressure((Double) pressureOutTextField.getValue());
         compProcess.setUsePolytropicCalc(efficiencyTypeDropDown.getValue().equals("Polytropic"));
         compProcess.setPolytropicEfficiency((Double) isentropicTextField.getValue());

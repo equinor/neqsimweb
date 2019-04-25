@@ -2664,7 +2664,7 @@ public class ComponentSelector extends AbstractPageBean {
 
             getThermo$ThermoSessionBean().resetThermoSystem();
 
-            thermo.system.SystemInterface thermoSystem = getThermo$ThermoSessionBean().getThermoSystem();
+            neqsim.thermo.system.SystemInterface thermoSystem = getThermo$ThermoSessionBean().getThermoSystem();
 
             if (java.lang.Double.parseDouble(getCarbonDioxideTextField().getValue().toString()) > 1.0E-20) {
 

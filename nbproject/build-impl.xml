@@ -551,7 +551,13 @@ exists or setup the property manually. For example like this:
     </target>
     <target depends="init,compile,compile-jsps,-pre-dist,-do-dist-with-manifest,-do-dist-without-manifest" name="do-dist"/>
     <target depends="init" if="dist.ear.dir" name="library-inclusion-in-manifest">
-        <copyfiles files="${libs.jsfsupport-designtime.classpath}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.libs.jsfsupport-designtime.classpath" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.NeqSim.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.NeqSim.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.jcommon-0.9.5.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jcommon-0.9.5.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.jstl.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jstl.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.mysql-connector-java-8.0.11.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.mysql-connector-java-8.0.11.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.itext-1.02b.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.itext-1.02b.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${libs.ui.complib50900.classpath}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.libs.ui.complib50900.classpath" todir="${dist.ear.dir}"/>
+        <copyfiles files="${libs.jaxws21.classpath}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.libs.jaxws21.classpath" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.AbsoluteLayout.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.AbsoluteLayout.jar-1" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.activation.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.activation.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.antlr-2.7.2.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.antlr-2.7.2.jar" todir="${dist.ear.dir}"/>
@@ -559,7 +565,6 @@ exists or setup the property manually. For example like this:
         <copyfiles files="${file.reference.arpack_combined_all-0.1.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.arpack_combined_all-0.1.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.bsf-2.3.0.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.bsf-2.3.0.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.colt.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.colt.jar-1" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.commons-beanutils-1.7.0.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.commons-beanutils-1.7.0.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.commons-chain-1.1.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.commons-chain-1.1.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.commons-digester-1.8.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.commons-digester-1.8.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.commons-fileupload-1.0.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.commons-fileupload-1.0.jar" todir="${dist.ear.dir}"/>
@@ -567,65 +572,45 @@ exists or setup the property manually. For example like this:
         <copyfiles files="${file.reference.commons-io-1.1.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.commons-io-1.1.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.commons-logging-1.0.4.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.commons-logging-1.0.4.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.commons-math3-3.4.1.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.commons-math3-3.4.1.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.derby.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.derby.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.EasyJccKit.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.EasyJccKit.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.ejml-cdense-0.33.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.ejml-cdense-0.33.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.ejml-core-0.33.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.ejml-core-0.33.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.ejml-ddense-0.33.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.ejml-ddense-0.33.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.ejml-dsparse-0.33.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.ejml-dsparse-0.33.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.ejml-experimental-0.33.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.ejml-experimental-0.33.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.ejml-fdense-0.33.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.ejml-fdense-0.33.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.ejml-simple-0.33.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.ejml-simple-0.33.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.ejml-zdense-0.33.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.ejml-zdense-0.33.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.commons-validator-1.3.1.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.commons-validator-1.3.1.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.dataprovider.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.dataprovider.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.defaulttheme.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.defaulttheme.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.errorhandler.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.errorhandler.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.FastInfoset.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.FastInfoset.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.flanagan.zip}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.flanagan.zip" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.HTTPClient.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.HTTPClient.jar-1" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.itext-1.02b.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.itext-1.02b.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.Jama-1.0.3.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.Jama-1.0.3.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.Jamlab.zip-1}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.Jamlab.zip-1" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.java-logging-1.1.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.java-logging-1.1.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.flanagan.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.flanagan.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.http.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.http.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.jaxb-api.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jaxb-api.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.jaxb-impl.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jaxb-impl.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.jaxb-xjc.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jaxb-xjc.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.jaxws-api.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jaxws-api.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.jaxws-rt.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jaxws-rt.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.jaxws-tools.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jaxws-tools.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.jcommon-0.9.5.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jcommon-0.9.5.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.jdom.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jdom.jar-1" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.jext.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jext.jar-1" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.jfreechart-0.9.20.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jfreechart-0.9.20.jar-1" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.jniloader-1.1.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jniloader-1.1.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.jnumeric-current.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jnumeric-current.jar-1" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.jsfcl.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jsfcl.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.jsr173_api.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jsr173_api.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.jsr181-api.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jsr181-api.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.jsr250-api.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jsr250-api.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.jstl-1.0.2.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jstl-1.0.2.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.jstl.jar-2}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jstl.jar-2" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.junit-4.12.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.junit-4.12.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.junit.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.junit.jar-1" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.jython.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.jython.jar-1" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.la4j-0.6.0.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.la4j-0.6.0.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.lashandler.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.lashandler.jar-1" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.lax.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.lax.jar-1" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.lp.zip}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.lp.zip" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.mtj-1.0.5-SNAPSHOT.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.mtj-1.0.5-SNAPSHOT.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.mysql-connector-java-5.1.23-bin.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.mysql-connector-java-5.1.23-bin.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.mimepull.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.mimepull.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.mysql-connector-java-5.1.40-bin.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.mysql-connector-java-5.1.40-bin.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.ncBrowse.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.ncBrowse.jar-1" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.NeqSimPlugin.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.NeqSimPlugin.jar-1" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.NeqSimSource.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.NeqSimSource.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.netcdfAll-4.0.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.netcdfAll-4.0.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.netcdfAll.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.netcdfAll.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.ojalgo-44.0.0.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.ojalgo-44.0.0.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.saaj-api.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.saaj-api.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.saaj-impl.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.saaj-impl.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.shale-remoting.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.shale-remoting.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.sjsxp.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.sjsxp.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.sqlx.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.sqlx.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.stax-ex.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.stax-ex.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.streambuffer.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.streambuffer.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.struts-core-1.3.8.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.struts-core-1.3.8.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.struts-el-1.3.8.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.struts-el-1.3.8.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.struts-extras-1.3.8.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.struts-extras-1.3.8.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.struts-faces-1.3.8.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.struts-faces-1.3.8.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.struts-mailreader-dao-1.3.8.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.struts-mailreader-dao-1.3.8.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.struts-scripting-1.3.8.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.struts-scripting-1.3.8.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.struts-taglib-1.3.8.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.struts-taglib-1.3.8.jar" todir="${dist.ear.dir}"/>
+        <copyfiles files="${file.reference.struts-tiles-1.3.8.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.struts-tiles-1.3.8.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.ui.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.ui.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.units.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.units.jar-1" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.visad.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.visad.jar" todir="${dist.ear.dir}"/>
         <copyfiles files="${file.reference.webui.jar}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.webui.jar" todir="${dist.ear.dir}"/>
-        <copyfiles files="${file.reference.xFunction.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.file.reference.xFunction.jar-1" todir="${dist.ear.dir}"/>
-        <copyfiles files="${libs.ui.complib50900.classpath}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.libs.ui.complib50900.classpath" todir="${dist.ear.dir}"/>
-        <copyfiles files="${libs.jaxws21.classpath}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.libs.jaxws21.classpath" todir="${dist.ear.dir}"/>
-        <copyfiles files="${libs.ui.complib50900.classpath}" iftldtodir="${build.web.dir}/WEB-INF" manifestproperty="manifest.libs.ui.complib50900.classpath" todir="${dist.ear.dir}"/>
         <copyfiles files="${libs.jsfsupport-runtime.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${libs.webui-runtime.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${libs.jdbcsupport-runtime.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
@@ -634,11 +619,17 @@ exists or setup the property manually. For example like this:
         <copyfiles files="${file.reference.jfreechart-0.9.20.jar}" todir="${build.web.dir}//"/>
         <mkdir dir="${build.web.dir}/META-INF"/>
         <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update">
-            <attribute name="Class-Path" value="${manifest.libs.jsfsupport-designtime.classpath} ${manifest.file.reference.AbsoluteLayout.jar-1} ${manifest.file.reference.activation.jar} ${manifest.file.reference.antlr-2.7.2.jar} ${manifest.file.reference.appbase.jar} ${manifest.file.reference.arpack_combined_all-0.1.jar} ${manifest.file.reference.bsf-2.3.0.jar} ${manifest.file.reference.colt.jar-1} ${manifest.file.reference.commons-beanutils-1.7.0.jar} ${manifest.file.reference.commons-chain-1.1.jar} ${manifest.file.reference.commons-digester-1.8.jar} ${manifest.file.reference.commons-fileupload-1.0.jar} ${manifest.file.reference.commons-fileupload-1.1.1.jar} ${manifest.file.reference.commons-io-1.1.jar} ${manifest.file.reference.commons-logging-1.0.4.jar} ${manifest.file.reference.commons-math3-3.4.1.jar} ${manifest.file.reference.derby.jar} ${manifest.file.reference.EasyJccKit.jar} ${manifest.file.reference.ejml-cdense-0.33.jar} ${manifest.file.reference.ejml-core-0.33.jar} ${manifest.file.reference.ejml-ddense-0.33.jar} ${manifest.file.reference.ejml-dsparse-0.33.jar} ${manifest.file.reference.ejml-experimental-0.33.jar} ${manifest.file.reference.ejml-fdense-0.33.jar} ${manifest.file.reference.ejml-simple-0.33.jar} ${manifest.file.reference.ejml-zdense-0.33.jar} ${manifest.file.reference.FastInfoset.jar} ${manifest.file.reference.flanagan.zip} ${manifest.file.reference.HTTPClient.jar-1} ${manifest.file.reference.itext-1.02b.jar} ${manifest.file.reference.Jama-1.0.3.jar} ${manifest.file.reference.Jamlab.zip-1} ${manifest.file.reference.java-logging-1.1.jar} ${manifest.file.reference.jaxb-api.jar} ${manifest.file.reference.jaxb-impl.jar} ${manifest.file.reference.jaxb-xjc.jar} ${manifest.file.reference.jaxws-api.jar} ${manifest.file.reference.jaxws-rt.jar} ${manifest.file.reference.jaxws-tools.jar} ${manifest.file.reference.jcommon-0.9.5.jar} ${manifest.file.reference.jdom.jar-1} ${manifest.file.reference.jext.jar-1} ${manifest.file.reference.jfreechart-0.9.20.jar-1} ${manifest.file.reference.jniloader-1.1.jar} ${manifest.file.reference.jnumeric-current.jar-1} ${manifest.file.reference.jsfcl.jar} ${manifest.file.reference.jsr173_api.jar} ${manifest.file.reference.jsr181-api.jar} ${manifest.file.reference.jsr250-api.jar} ${manifest.file.reference.jstl-1.0.2.jar} ${manifest.file.reference.jstl.jar-2} ${manifest.file.reference.junit-4.12.jar} ${manifest.file.reference.junit.jar-1} ${manifest.file.reference.jython.jar-1} ${manifest.file.reference.la4j-0.6.0.jar} ${manifest.file.reference.lashandler.jar-1} ${manifest.file.reference.lax.jar-1} ${manifest.file.reference.lp.zip} ${manifest.file.reference.mtj-1.0.5-SNAPSHOT.jar} ${manifest.file.reference.mysql-connector-java-5.1.23-bin.jar} ${manifest.file.reference.mysql-connector-java-5.1.40-bin.jar} ${manifest.file.reference.ncBrowse.jar-1} ${manifest.file.reference.NeqSimPlugin.jar-1} ${manifest.file.reference.NeqSimSource.jar} ${manifest.file.reference.netcdfAll-4.0.jar} ${manifest.file.reference.netcdfAll.jar} ${manifest.file.reference.ojalgo-44.0.0.jar} ${manifest.file.reference.ui.jar} ${manifest.file.reference.units.jar-1} ${manifest.file.reference.visad.jar} ${manifest.file.reference.webui.jar} ${manifest.file.reference.xFunction.jar-1} ${manifest.libs.ui.complib50900.classpath} ${manifest.libs.jaxws21.classpath} ${manifest.libs.ui.complib50900.classpath} "/>
+            <attribute name="Class-Path" value="${manifest.file.reference.NeqSim.jar} ${manifest.file.reference.jcommon-0.9.5.jar} ${manifest.file.reference.jstl.jar} ${manifest.file.reference.mysql-connector-java-8.0.11.jar} ${manifest.file.reference.itext-1.02b.jar} ${manifest.libs.ui.complib50900.classpath} ${manifest.libs.jaxws21.classpath} ${manifest.file.reference.AbsoluteLayout.jar-1} ${manifest.file.reference.activation.jar} ${manifest.file.reference.antlr-2.7.2.jar} ${manifest.file.reference.appbase.jar} ${manifest.file.reference.arpack_combined_all-0.1.jar} ${manifest.file.reference.bsf-2.3.0.jar} ${manifest.file.reference.colt.jar-1} ${manifest.file.reference.commons-chain-1.1.jar} ${manifest.file.reference.commons-digester-1.8.jar} ${manifest.file.reference.commons-fileupload-1.0.jar} ${manifest.file.reference.commons-fileupload-1.1.1.jar} ${manifest.file.reference.commons-io-1.1.jar} ${manifest.file.reference.commons-logging-1.0.4.jar} ${manifest.file.reference.commons-math3-3.4.1.jar} ${manifest.file.reference.commons-validator-1.3.1.jar} ${manifest.file.reference.dataprovider.jar} ${manifest.file.reference.defaulttheme.jar} ${manifest.file.reference.errorhandler.jar} ${manifest.file.reference.FastInfoset.jar} ${manifest.file.reference.flanagan.jar} ${manifest.file.reference.http.jar} ${manifest.file.reference.jaxb-api.jar} ${manifest.file.reference.jaxb-impl.jar} ${manifest.file.reference.jaxb-xjc.jar} ${manifest.file.reference.jaxws-api.jar} ${manifest.file.reference.jaxws-rt.jar} ${manifest.file.reference.jaxws-tools.jar} ${manifest.file.reference.jfreechart-0.9.20.jar-1} ${manifest.file.reference.jsfcl.jar} ${manifest.file.reference.jsr173_api.jar} ${manifest.file.reference.jsr181-api.jar} ${manifest.file.reference.jsr250-api.jar} ${manifest.file.reference.jstl.jar-2} ${manifest.file.reference.lp.zip} ${manifest.file.reference.mimepull.jar} ${manifest.file.reference.mysql-connector-java-5.1.40-bin.jar} ${manifest.file.reference.saaj-api.jar} ${manifest.file.reference.saaj-impl.jar} ${manifest.file.reference.shale-remoting.jar} ${manifest.file.reference.sjsxp.jar} ${manifest.file.reference.sqlx.jar} ${manifest.file.reference.stax-ex.jar} ${manifest.file.reference.streambuffer.jar} ${manifest.file.reference.struts-core-1.3.8.jar} ${manifest.file.reference.struts-el-1.3.8.jar} ${manifest.file.reference.struts-extras-1.3.8.jar} ${manifest.file.reference.struts-faces-1.3.8.jar} ${manifest.file.reference.struts-mailreader-dao-1.3.8.jar} ${manifest.file.reference.struts-scripting-1.3.8.jar} ${manifest.file.reference.struts-taglib-1.3.8.jar} ${manifest.file.reference.struts-tiles-1.3.8.jar} ${manifest.file.reference.ui.jar} ${manifest.file.reference.webui.jar} "/>
         </manifest>
     </target>
     <target depends="init" name="library-inclusion-in-archive" unless="dist.ear.dir">
-        <copyfiles files="${libs.jsfsupport-designtime.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.NeqSim.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.jcommon-0.9.5.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.jstl.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.mysql-connector-java-8.0.11.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.itext-1.02b.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${libs.ui.complib50900.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${libs.jaxws21.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.AbsoluteLayout.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.activation.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.antlr-2.7.2.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
@@ -646,7 +637,6 @@ exists or setup the property manually. For example like this:
         <copyfiles files="${file.reference.arpack_combined_all-0.1.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.bsf-2.3.0.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.colt.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.commons-beanutils-1.7.0.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.commons-chain-1.1.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.commons-digester-1.8.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.commons-fileupload-1.0.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
@@ -654,65 +644,45 @@ exists or setup the property manually. For example like this:
         <copyfiles files="${file.reference.commons-io-1.1.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.commons-logging-1.0.4.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.commons-math3-3.4.1.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.derby.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.EasyJccKit.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.ejml-cdense-0.33.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.ejml-core-0.33.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.ejml-ddense-0.33.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.ejml-dsparse-0.33.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.ejml-experimental-0.33.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.ejml-fdense-0.33.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.ejml-simple-0.33.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.ejml-zdense-0.33.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.commons-validator-1.3.1.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.dataprovider.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.defaulttheme.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.errorhandler.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.FastInfoset.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.flanagan.zip}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.HTTPClient.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.itext-1.02b.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.Jama-1.0.3.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.Jamlab.zip-1}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.java-logging-1.1.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.flanagan.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.http.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.jaxb-api.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.jaxb-impl.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.jaxb-xjc.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.jaxws-api.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.jaxws-rt.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.jaxws-tools.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.jcommon-0.9.5.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.jdom.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.jext.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.jfreechart-0.9.20.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.jniloader-1.1.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.jnumeric-current.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.jsfcl.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.jsr173_api.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.jsr181-api.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.jsr250-api.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.jstl-1.0.2.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.jstl.jar-2}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.junit-4.12.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.junit.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.jython.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.la4j-0.6.0.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.lashandler.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.lax.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.lp.zip}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.mtj-1.0.5-SNAPSHOT.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.mysql-connector-java-5.1.23-bin.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.mimepull.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.mysql-connector-java-5.1.40-bin.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.ncBrowse.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.NeqSimPlugin.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.NeqSimSource.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.netcdfAll-4.0.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.netcdfAll.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.ojalgo-44.0.0.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.saaj-api.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.saaj-impl.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.shale-remoting.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.sjsxp.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.sqlx.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.stax-ex.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.streambuffer.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.struts-core-1.3.8.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.struts-el-1.3.8.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.struts-extras-1.3.8.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.struts-faces-1.3.8.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.struts-mailreader-dao-1.3.8.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.struts-scripting-1.3.8.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.struts-taglib-1.3.8.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.struts-tiles-1.3.8.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.ui.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.units.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.visad.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.webui.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.xFunction.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${libs.ui.complib50900.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${libs.jaxws21.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${libs.ui.complib50900.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${libs.jsfsupport-runtime.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${libs.webui-runtime.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${libs.jdbcsupport-runtime.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>

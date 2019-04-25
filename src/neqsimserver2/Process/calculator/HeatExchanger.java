@@ -206,8 +206,8 @@ public class HeatExchanger extends AbstractPageBean {
         getThermo$ThermoSessionBean().getThermoSystem().init(1);
         getThermo$ThermoSessionBean().getThermoSystem().setTemperature((Double) temperatureInTextField.getValue() + 273.15);
         getThermo$ThermoSessionBean().getThermoSystem().setPressure((Double) pressureInTextField.getValue());
-        processSimulation.processEquipment.stream.Stream tempStream = new processSimulation.processEquipment.stream.Stream(getThermo$ThermoSessionBean().getThermoSystem());
-        processSimulation.processEquipment.heatExchanger.Heater heater = new processSimulation.processEquipment.heatExchanger.Heater(tempStream);
+        neqsim.processSimulation.processEquipment.stream.Stream tempStream = new neqsim.processSimulation.processEquipment.stream.Stream(getThermo$ThermoSessionBean().getThermoSystem());
+        neqsim.processSimulation.processEquipment.heatExchanger.Heater heater = new neqsim.processSimulation.processEquipment.heatExchanger.Heater(tempStream);
         heater.setOutTemperature((Double) temperatureOutTextField.getValue() + 273.15);//setOutletPressure((Double) pressureOutTextField.getValue());
         heater.setPressureDrop((Double) pressureDropTextField.getValue());
        

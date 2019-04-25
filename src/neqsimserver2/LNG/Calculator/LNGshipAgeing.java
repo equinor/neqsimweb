@@ -20,7 +20,7 @@ import neqsimserver2.GasQuality.GasQualitySessionBean;
 import neqsimserver2.SessionBean1;
 import neqsimserver2.Thermo.ThermoSessionBean;
 import neqsimserver2.ApplicationBean1;
-import fluidMechanics.flowSystem.twoPhaseFlowSystem.shipSystem.*;
+import neqsim.fluidMechanics.flowSystem.twoPhaseFlowSystem.shipSystem.*;
 
 /**
  * <p>Page bean that corresponds to a similarly named JSP page.  This

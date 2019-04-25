@@ -828,7 +828,7 @@ public class AddAnalyser extends AbstractPageBean {
 
         try {
 
-            pkRowSet.setDataSourceName("java:comp/env/jdbc/neqsimdatabase_MySQL");
+            pkRowSet.setDataSourceName("java:comp/env/jdbc/NeqsimDataSource");
 
             pkRowSet.setCommand("SELECT MAX(ANALYSERS.ID)+1 FROM ANALYSERS");
 

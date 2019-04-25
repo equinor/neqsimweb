@@ -6,14 +6,6 @@
     <res-ref-name>jdbc/NeqsimDataSource</res-ref-name>
     <jndi-name>jdbc/NeqsimDataSource</jndi-name>
   </resource-ref>
-  <resource-ref>
-    <res-ref-name>jdbc/NeqsimDataSource_MySQL</res-ref-name>
-    <jndi-name>jdbc/NeqsimDataSource_MySQL</jndi-name>
-  </resource-ref>
-  <resource-ref>
-    <res-ref-name>jdbc/neqsimdatabase_MySQL</res-ref-name>
-    <jndi-name>jdbc/neqsimdatabase_MySQL</jndi-name>
-  </resource-ref>
   <class-loader delegate="false"/>
   <jsp-config>
     <property name="classdebuginfo" value="true">

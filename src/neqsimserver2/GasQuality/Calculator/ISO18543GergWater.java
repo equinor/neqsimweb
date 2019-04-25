@@ -517,7 +517,7 @@ public class ISO18543GergWater extends AbstractPageBean {
         getThermo$ThermoSessionBean().getThermoSystem().setHydrateCheck(false);
         getThermo$ThermoSessionBean().getThermoSystem().init(0);
         
-        thermodynamicOperations.ThermodynamicOperations ops = new  thermodynamicOperations.ThermodynamicOperations(getThermo$ThermoSessionBean().getThermoSystem());
+        neqsim.thermodynamicOperations.ThermodynamicOperations ops = new  neqsim.thermodynamicOperations.ThermodynamicOperations(getThermo$ThermoSessionBean().getThermoSystem());
         try{
             ops.waterDewPointTemperatureFlash();
         } catch (Exception e){

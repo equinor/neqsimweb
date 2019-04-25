@@ -210,8 +210,8 @@ public class Valve extends AbstractPageBean {
         getThermo$ThermoSessionBean().getThermoSystem().init(1);
         getThermo$ThermoSessionBean().getThermoSystem().setTemperature((Double) temperatureTextField.getValue() + 273.15);
         getThermo$ThermoSessionBean().getThermoSystem().setPressure((Double) pressureTextField.getValue());
-        processSimulation.processEquipment.stream.Stream tempStream = new processSimulation.processEquipment.stream.Stream(getThermo$ThermoSessionBean().getThermoSystem());
-        processSimulation.processEquipment.valve.ThrottlingValve compProcess = new processSimulation.processEquipment.valve.ThrottlingValve("valve", tempStream);
+        neqsim.processSimulation.processEquipment.stream.Stream tempStream = new neqsim.processSimulation.processEquipment.stream.Stream(getThermo$ThermoSessionBean().getThermoSystem());
+        neqsim.processSimulation.processEquipment.valve.ThrottlingValve compProcess = new neqsim.processSimulation.processEquipment.valve.ThrottlingValve("valve", tempStream);
         compProcess.setOutletPressure((Double) pressureOutTextField.getValue());
         tempStream.run();
         compProcess.run();

@@ -553,10 +553,10 @@ public class ISO6976energy extends AbstractPageBean {
         String refType = getOutputRadioButtonGroup().getSelected().toString();
         System.out.println("ref temp " + refTempVol.intValue());
 
-        standards.gasQuality.Standard_ISO6976 standard = new standards.gasQuality.Standard_ISO6976(getThermo$ThermoSessionBean().getThermoSystem(), refTempVol.doubleValue(), refTempEnergy.doubleValue(), refType);
+        neqsim.standards.gasQuality.Standard_ISO6976 standard = new neqsim.standards.gasQuality.Standard_ISO6976(getThermo$ThermoSessionBean().getThermoSystem(), refTempVol.doubleValue(), refTempEnergy.doubleValue(), refType);
 
         if(standardNameGroupDefaultOptions.getSelectedValue().toString().equals("2016")){
-            standard = new standards.gasQuality.Standard_ISO6976_2016(getThermo$ThermoSessionBean().getThermoSystem(), refTempVol.doubleValue(), refTempEnergy.doubleValue(), refType);
+            standard = new neqsim.standards.gasQuality.Standard_ISO6976_2016(getThermo$ThermoSessionBean().getThermoSystem(), refTempVol.doubleValue(), refTempEnergy.doubleValue(), refType);
         }
         String idealreal = gasBehaviorButtonGroup.getSelected().toString();
         standard.setReferenceState(idealreal);

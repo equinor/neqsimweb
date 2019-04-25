@@ -191,8 +191,8 @@ public class Separator extends AbstractPageBean {
         getThermo$ThermoSessionBean().getThermoSystem().init(1);
         getThermo$ThermoSessionBean().getThermoSystem().setTemperature((Double) temperatureTextField.getValue() + 273.15);
         getThermo$ThermoSessionBean().getThermoSystem().setPressure((Double) pressureTextField.getValue());
-        processSimulation.processEquipment.stream.Stream tempStream = new processSimulation.processEquipment.stream.Stream(getThermo$ThermoSessionBean().getThermoSystem());
-        processSimulation.processEquipment.separator.Separator sepProcess = new processSimulation.processEquipment.separator.Separator("separator", tempStream);
+        neqsim.processSimulation.processEquipment.stream.Stream tempStream = new neqsim.processSimulation.processEquipment.stream.Stream(getThermo$ThermoSessionBean().getThermoSystem());
+        neqsim.processSimulation.processEquipment.separator.Separator sepProcess = new neqsim.processSimulation.processEquipment.separator.Separator("separator", tempStream);
         tempStream.run();
         sepProcess.run();
         getThermo$ThermoSessionBean().getThermoSystem().createTable(

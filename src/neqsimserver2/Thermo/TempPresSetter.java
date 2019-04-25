@@ -157,7 +157,7 @@ public class TempPresSetter extends AbstractPageBean {
         getThermo$ThermoSessionBean().getThermoSystem().setMultiPhaseCheck(true);
 
         getThermo$ThermoSessionBean().getThermoSystem().getInterphaseProperties().setInterfacialTensionModel(0);
-        thermodynamicOperations.ThermodynamicOperations ops = new thermodynamicOperations.ThermodynamicOperations(
+        neqsim.thermodynamicOperations.ThermodynamicOperations ops = new neqsim.thermodynamicOperations.ThermodynamicOperations(
                 getThermo$ThermoSessionBean().getThermoSystem());
 
         ops.TPflash();

@@ -28,10 +28,10 @@ public class TempSelector extends AbstractPageBean {
 	// <editor-fold defaultstate="collapsed" desc="Creator-managed Component
 	// Definition">
 
-	private thermo.system.SystemInterface thermoSystem = new thermo.system.SystemSrkEos(
+	private neqsim.thermo.system.SystemInterface thermoSystem = new neqsim.thermo.system.SystemSrkEos(
 			290.0, 3.0);
 
-	private thermodynamicOperations.ThermodynamicOperations thermoOps = new thermodynamicOperations.ThermodynamicOperations(
+	private neqsim.thermodynamicOperations.ThermodynamicOperations thermoOps = new neqsim.thermodynamicOperations.ThermodynamicOperations(
 			thermoSystem);
 
 	private int __placeholder;
@@ -499,7 +499,7 @@ public class TempSelector extends AbstractPageBean {
 
 			thermoSystem.setPressure(java.lang.Double.parseDouble(getPressureTextField().getValue().toString()));
 
-			thermoOps = new thermodynamicOperations.ThermodynamicOperations(
+			thermoOps = new neqsim.thermodynamicOperations.ThermodynamicOperations(
 					thermoSystem);
 
 			if (java.lang.Double.parseDouble(getMethaneTextField().getValue().toString()) > 1.0E-20) {

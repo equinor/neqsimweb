@@ -217,7 +217,7 @@ public class LNGFreezingCalculation2 extends AbstractPageBean {
         getThermo$ThermoSessionBean().getThermoSystem().setSolidPhaseCheck(componentButtonGroup.getSelected().toString());
         System.out.println("component " + componentButtonGroup.getSelected());
 
-        thermodynamicOperations.ThermodynamicOperations ops = new thermodynamicOperations.ThermodynamicOperations(
+        neqsim.thermodynamicOperations.ThermodynamicOperations ops = new neqsim.thermodynamicOperations.ThermodynamicOperations(
                 getThermo$ThermoSessionBean().getThermoSystem());
 
         try {

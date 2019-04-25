@@ -50,6 +50,7 @@ public class LoginBean implements Serializable{
         boolean ok = true;
         
         CachedRowSetDataProvider usersDataProvider = getSessionBean1().getUserdbDataProvider();
+        //
         CachedRowSetDataProvider companyDataProvider = getSessionBean1().getCompanyDataProvider();
         
         CachedRowSetXImpl usersRowSet = getSessionBean1().getUserdbRowSet();

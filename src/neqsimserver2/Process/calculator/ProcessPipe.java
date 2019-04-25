@@ -229,8 +229,8 @@ public class ProcessPipe extends AbstractPageBean {
         double inletPressure = (Double) pressureTextField.getValue();
         getThermo$ThermoSessionBean().getThermoSystem().setTemperature((Double) temperatureTextField.getValue() + 273.15);
         getThermo$ThermoSessionBean().getThermoSystem().setPressure(inletPressure);
-        processSimulation.processEquipment.stream.Stream tempStream = new processSimulation.processEquipment.stream.Stream(getThermo$ThermoSessionBean().getThermoSystem());
-        processSimulation.processEquipment.pipeline.AdiabaticPipe pipe = new processSimulation.processEquipment.pipeline.AdiabaticPipe(tempStream);
+        neqsim.processSimulation.processEquipment.stream.Stream tempStream = new neqsim.processSimulation.processEquipment.stream.Stream(getThermo$ThermoSessionBean().getThermoSystem());
+        neqsim.processSimulation.processEquipment.pipeline.AdiabaticPipe pipe = new neqsim.processSimulation.processEquipment.pipeline.AdiabaticPipe(tempStream);
         pipe.setDiameter((Double) diameterTextField.getValue());
         pipe.setLength((Double) lengthTextField.getValue());
         pipe.setPipeWallRoughness((Double) surfaceRoughnessTextField.getValue()/1.0e6);
