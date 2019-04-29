@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <Context antiResourceLocking="false" privileged="true"> -->
+<!--
+  <Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+  <Manager sessionAttributeValueClassNameFilter="java\.lang\.(?:Boolean|Integer|Long|Number|String)|org\.apache\.catalina\.filters\.CsrfPreventionFilter\$LruCache(?:\$1)?|java\.util\.(?:Linked)?HashMap"/>
+  -->
+<!-- <Context antiJARLocking="true" path="/mysqlPool"> -->
+<Context>
+
+
+  <!-- <Resource name="jdbc/NeqsimDataSource" 
+  auth="Container" 
+  type="javax.sql.DataSource"
+   maxActive="100" 
+   maxIdle="30"
+    maxWait="10000" 
+    username="remote" 
+    password="remote" 
+    driverClassName="com.mysql.jdbc.Driver" 
+    url="jdbc:mysql://tr-w33:3306/NeqSimServer3"
+    /> -->
+  <!-- <Resource name="jdbc/NeqsimDataSource" auth="Container" type="javax.sql.DataSource" maxActive="100" maxIdle="30" maxWait="10000" username="remote" password="remote" driverClassName="com.mysql.jdbc.Driver" url="jdbc:mysql://tr-w33:3306/neqsimdatabase"/> -->
+
+</Context>
+<!-- </Context> -->
