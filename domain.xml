@@ -51,10 +51,10 @@
     <managed-scheduled-executor-service object-type="system-all" jndi-name="concurrent/__defaultManagedScheduledExecutorService"></managed-scheduled-executor-service>
     <managed-thread-factory object-type="system-all" jndi-name="concurrent/__defaultManagedThreadFactory"></managed-thread-factory>
     <jdbc-connection-pool driver-classname="com.mysql.jdbc.Driver" ping="true" datasource-classname="com.mysql.jdbc.jdbc2.optional.MysqlDataSource" name="MySQLPool" res-type="javax.sql.XADataSource">
-      <property name="user" value="remote"></property>
-      <property name="Password" value="remote"></property>
-      <property name="databaseName" value="neqsimdatabase"></property>
-      <property name="URL" value="jdbc:mysql://database:3306/neqsimdatabase"></property>
+      <property name="user" value="placeholder"></property>
+      <property name="Password" value="placeholder"></property>
+      <property name="databaseName" value="placeholder"></property>
+      <property name="URL" value="placeholder"></property>
     </jdbc-connection-pool>
     <jdbc-resource pool-name="MySQLPool" jndi-name="jdbc/NeqsimDataSource"></jdbc-resource>
   </resources>

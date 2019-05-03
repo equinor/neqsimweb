@@ -10,8 +10,24 @@ See the [NeqSim Wiki](https://wiki.equinor.com/wiki/index.php/NeqSim) for how to
 ### Prerequisites
 NeqSim Web source code can be compiled with JDK8+ and is dependent on a number of third part java libraries. All libraries are included in the distributed war file. The ..
 
-## Deployment
-The NeqSim source code is compiled and distributed as a web archive. [NeqSim Web releases](https://github.com/equinor/neqsimweb/releases) are available for download from the release pages, and can be deplyed an a java application server.
+## Deployment (Work-In-Progress)
+The NeqSimWeb application is deployed as a container. You can build this container with the latest version file by using the Dockerfile found in this repo.  
+There is also a Docker-compose file that can be used to deploy the web-server and the required database together.  
+Secrets are read from the ".secrets" file. Keep this out of the git repository. You can use the "secrets.template" file as guidance.
+
+Before you can build the container image, you need two files.  
+
+* The application compiled as a java web archive (.war) in the repo root.
+* The latest `mysql-connector-java-X.X.XX.jar`in ./lib/
+
+You can now deploy the application;  
+`docker-compose up --build`
+
+The database will be empty the first time you start the containers. To load a database dump into the database, you can do something like this, if the dump is mounted into the container;  
+```
+docker exec -it neqsim-database sh
+mysql -u root -p neqsimdatabase < /temporary/databaseDump.sql
+```
 
 ## Versioning
 NeqSim use [SemVer](https://semver.org/) for versioning.

@@ -51,3 +51,6 @@ nbdist/
 
 # Docker database volume
 /data
+
+# The secrets file
+.secrets

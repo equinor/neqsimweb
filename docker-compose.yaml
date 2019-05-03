@@ -8,9 +8,14 @@ services:
   #     - "80:80"
 
   neqsimweb:
-    container_name: neqsimweb
-    hostname: neqsimweb
+    container_name: neqsim-web
+    hostname: neqsim-web
     image: neqsimweb
+    env_file: 
+      - .secrets
+    environment:
+      MYSQL_USER: remote
+      MYSQL_URL: jdbc:mysql://database:3306/neqsimdatabase
     build: .
     ports:
       - "80:8080"
@@ -18,14 +23,13 @@ services:
   database:
     image: mysql:5.7
     command: --default-authentication-plugin=mysql_native_password --max_allowed_packet=325058560
-    container_name: database
+    container_name: neqsim-database
     restart: always
+    env_file: 
+      - .secrets
     environment:
-      MYSQL_ROOT_PASSWORD: mintest
       MYSQL_DATABASE: neqsimdatabase
       MYSQL_USER: remote
-      # TODO: Use secret and set db connectionstring from ENV
-      MYSQL_PASSWORD: remote
     volumes:
       - "./data/database:/var/lib/mysql"
       # Only needed to populate DB 
