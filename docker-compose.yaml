@@ -15,15 +15,17 @@ services:
       - .secrets
     environment:
       MYSQL_USER: remote
-      MYSQL_URL: jdbc:mysql://database:3306/neqsimdatabase
+      MYSQL_URL: jdbc:mysql://neqsim-db:3306/neqsimdatabase
+      NEQSIMTHERMODB_CS: jdbc:mysql://thermo-db:3306/neqsimthermodatabase
+      NEQSIMTHERMODB_USER: remote
     build: .
     ports:
       - "80:8080"
 
-  database:
+  neqsim-db:
     image: mysql:5.7
     command: --default-authentication-plugin=mysql_native_password --max_allowed_packet=325058560
-    container_name: neqsim-database
+    container_name: neqsim-db
     restart: always
     env_file: 
       - .secrets
@@ -31,9 +33,26 @@ services:
       MYSQL_DATABASE: neqsimdatabase
       MYSQL_USER: remote
     volumes:
-      - "./data/database:/var/lib/mysql"
+      - "./data/neqsimdatabase:/var/lib/mysql"
+      # Only needed to populate DB 
+      # - "./data/dumps:/temporary"
+    # # If you want to connect to the database directly, expose these ports.
+    # ports:
+    #   - "3306:3306"
+  thermo-db:
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password --max_allowed_packet=325058560
+    container_name: thermo-db
+    restart: always
+    env_file: 
+      - .secrets
+    environment:
+      MYSQL_DATABASE: neqsimthermodatabase 
+      MYSQL_USER: remote
+    volumes:
+      - "./data/thermodatabase:/var/lib/mysql"
       # Only needed to populate DB 
       - "./data/dumps:/temporary"
     # # If you want to connect to the database directly, expose these ports.
     # ports:
-    #   - "3306:3306"
+    #   - "3307:3306"
