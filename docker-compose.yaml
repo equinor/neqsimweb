@@ -16,7 +16,7 @@ services:
     environment:
       MYSQL_USER: remote
       MYSQL_URL: jdbc:mysql://neqsim-db:3306/neqsimdatabase
-      NEQSIMTHERMODB_CS: jdbc:mysql://thermo-db:3306/neqsimthermodatabase
+      NEQSIMTHERMODB_CS: jdbc:mysql://thermo-db:3306/neqsimthermodatabase?useSSL=false
       NEQSIMTHERMODB_USER: remote
     build: .
     ports:
@@ -35,7 +35,7 @@ services:
     volumes:
       - "./data/neqsimdatabase:/var/lib/mysql"
       # Only needed to populate DB 
-      # - "./data/dumps:/temporary"
+      - "./data/dumps:/temporary"
     # # If you want to connect to the database directly, expose these ports.
     # ports:
     #   - "3306:3306"
@@ -54,5 +54,5 @@ services:
       # Only needed to populate DB 
       - "./data/dumps:/temporary"
     # # If you want to connect to the database directly, expose these ports.
-    # ports:
-    #   - "3307:3306"
+    ports:
+      - "3307:3306"
