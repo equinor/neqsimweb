@@ -1,6 +1,10 @@
 #! /bin/bash
 source ./.secrets
 REPO="equinor/neqsimweb"
+if [[ -z $GITHUB_TOKEN ]]; then
+    echo "Missing GITHUB_TOKEN in '.secrets'. Exiting..."
+    exit 1
+fi
 echo "Authenticating with token: $GITHUB_TOKEN"
 LATEST_ASSET=$(curl --silent -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/$REPO/releases/latest |
             jq .assets[0].id)
