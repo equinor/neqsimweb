@@ -17,7 +17,7 @@ services:
       MYSQL_USER: remote
       MYSQL_URL: jdbc:mysql://neqsim-db:3306/neqsimdatabase
       NEQSIMTHERMODB_CS: jdbc:mysql://thermo-db:3306/neqsimthermodatabase?useSSL=false
-      NEQSIMTHERMODB_USER: remote
+      NEQSIMBLOBDB_CS: jdbc:mysql://fluidblob-db:3306/neqsimblobdb?useSSL=false
     build: .
     ports:
       - "80:8080"
@@ -56,3 +56,20 @@ services:
     # # If you want to connect to the database directly, expose these ports.
     ports:
       - "3307:3306"
+  fluidblob-db:
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password --max_allowed_packet=325058560
+    container_name: fluidblob-db
+    restart: always
+    env_file: 
+      - .secrets
+    environment:
+      MYSQL_DATABASE: neqsimblobdb
+      MYSQL_USER: remote
+    volumes:
+      - "./data/neqsimblobdb:/var/lib/mysql"
+      # Only needed to populate DB 
+      - "./data/dumps:/temporary"
+    # # If you want to connect to the database directly, expose these ports.
+    ports:
+      - "3308:3306"
