@@ -54,3 +54,4 @@ nbdist/
 
 # The secrets file
 .secrets
+.vscode
