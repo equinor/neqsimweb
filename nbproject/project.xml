@@ -9,9 +9,6 @@
             <explicit-platform explicit-source-supported="true"/>
             <web-module-libraries>
                 <library>
-                    <file>${libs.jsfsupport-designtime.classpath}</file>
-                </library>
-                <library>
                     <file>${libs.webui-designtime.classpath}</file>
                 </library>
                 <library>
@@ -46,6 +43,13 @@
                 </library>
                 <library>
                     <file>${libs.jaxws21.classpath}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library>
+                    <file>${libs.jsf12.classpath}</file>
+                </library>
+                <library>
+                    <file>${libs.jsf-extensions.classpath}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library>
@@ -260,6 +264,18 @@
                     <file>${file.reference.webui.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
+                <library>
+                    <file>${libs.spring-webmvc.classpath}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library>
+                    <file>${libs.spring-framework.classpath}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library>
+                    <file>${libs.struts.classpath}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
             </web-module-libraries>
             <web-module-additional-libraries>
                 <library>
@@ -297,8 +313,16 @@
         <hardcoded-datasource-names xmlns="http://creator.sun.com/project/datasources" value=""/>
         <references xmlns="http://www.netbeans.org/ns/ant-project-references/1"/>
         <spring-data xmlns="http://www.netbeans.org/ns/spring-data/1">
-            <config-files/>
-            <config-file-groups/>
+            <config-files>
+                <config-file>web/WEB-INF/applicationContext.xml</config-file>
+                <config-file>web/WEB-INF/dispatcher-servlet.xml</config-file>
+            </config-files>
+            <config-file-groups>
+                <config-file-group name="Default Group">
+                    <config-file>web/WEB-INF/applicationContext.xml</config-file>
+                    <config-file>web/WEB-INF/dispatcher-servlet.xml</config-file>
+                </config-file-group>
+            </config-file-groups>
         </spring-data>
     </configuration>
 </project>

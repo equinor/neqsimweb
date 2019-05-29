@@ -233,7 +233,6 @@ public class Login extends AbstractPageBean {
     protected neqsimserver2.Thermo.ThermoSessionBean getThermo$ThermoSessionBean() {
         return (neqsimserver2.Thermo.ThermoSessionBean) getBean("Thermo$ThermoSessionBean");
     }
-
     /**
      * <p>Return a reference to the scoped data bean.</p>
      */

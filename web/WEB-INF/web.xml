@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"><context-param><param-name>javax.faces.STATE_SAVING_METHOD</param-name><param-value>server</param-value></context-param><context-param><param-name>javax.faces.CONFIG_FILES</param-name><param-value>/WEB-INF/navigation.xml,/WEB-INF/managed-beans.xml</param-value></context-param><context-param><param-name>com.sun.faces.validateXml</param-name><param-value>true</param-value></context-param><context-param><param-name>com.sun.faces.verifyObjects</param-name><param-value>false</param-value></context-param><filter><filter-name>UploadFilter</filter-name><filter-class>com.sun.rave.web.ui.util.UploadFilter</filter-class><init-param><description>The maximum allowed upload size in bytes.  If this is set
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"><context-param><param-name>javax.faces.STATE_SAVING_METHOD</param-name><param-value>server</param-value></context-param><context-param><param-name>javax.faces.CONFIG_FILES</param-name><param-value>/WEB-INF/navigation.xml,/WEB-INF/managed-beans.xml</param-value></context-param><context-param><param-name>com.sun.faces.validateXml</param-name><param-value>true</param-value></context-param><context-param><param-name>com.sun.faces.verifyObjects</param-name><param-value>false</param-value></context-param>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/applicationContext.xml</param-value>
+    </context-param>
+    <filter><filter-name>UploadFilter</filter-name><filter-class>com.sun.rave.web.ui.util.UploadFilter</filter-class><init-param><description>The maximum allowed upload size in bytes.  If this is set
           to a negative value, there is no maximum.  The default
           value is 1000000.</description><param-name>maxSize</param-name><param-value>-1</param-value></init-param><init-param><description>
           The size (in bytes) of an uploaded file which, if it is
@@ -7,7 +12,11 @@
           disk instead of stored in memory.  Files smaller than or
           equal to this size will be stored in memory.  The default
           value is 4096.
-        </description><param-name>sizeThreshold</param-name><param-value>4096</param-value></init-param></filter><filter><filter-name>SecurityFilter</filter-name><filter-class>neqsimserver2.Util.SecurityFilter</filter-class></filter><filter-mapping><filter-name>UploadFilter</filter-name><servlet-name>Faces Servlet</servlet-name></filter-mapping><filter-mapping><filter-name>SecurityFilter</filter-name><url-pattern>*.jsp</url-pattern></filter-mapping><servlet><servlet-name>Faces Servlet</servlet-name><servlet-class>javax.faces.webapp.FacesServlet</servlet-class><load-on-startup>1</load-on-startup></servlet><servlet><servlet-name>ExceptionHandlerServlet</servlet-name><servlet-class>com.sun.errorhandler.ExceptionHandler</servlet-class></servlet><servlet><servlet-name>ThemeServlet</servlet-name><servlet-class>com.sun.rave.web.ui.theme.ThemeServlet</servlet-class></servlet><servlet><servlet-name>DisplayImage</servlet-name><servlet-class>neqsimserver2.Thermo.DisplayImage</servlet-class></servlet><servlet><servlet-name>DisplayJFreeChartImage</servlet-name><servlet-class>neqsimserver2.Thermo.DisplayJFreeChartImage</servlet-class></servlet><servlet><servlet-name>DisplayDocument</servlet-name><servlet-class>neqsimserver2.Util.DisplayDocument</servlet-class></servlet>
+        </description><param-name>sizeThreshold</param-name><param-value>4096</param-value></init-param></filter><filter><filter-name>SecurityFilter</filter-name><filter-class>neqsimserver2.Util.SecurityFilter</filter-class></filter><filter-mapping><filter-name>UploadFilter</filter-name><servlet-name>Faces Servlet</servlet-name></filter-mapping><filter-mapping><filter-name>SecurityFilter</filter-name><url-pattern>*.jsp</url-pattern></filter-mapping>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <servlet><servlet-name>Faces Servlet</servlet-name><servlet-class>javax.faces.webapp.FacesServlet</servlet-class><load-on-startup>1</load-on-startup></servlet><servlet><servlet-name>ExceptionHandlerServlet</servlet-name><servlet-class>com.sun.errorhandler.ExceptionHandler</servlet-class></servlet><servlet><servlet-name>ThemeServlet</servlet-name><servlet-class>com.sun.rave.web.ui.theme.ThemeServlet</servlet-class></servlet><servlet><servlet-name>DisplayImage</servlet-name><servlet-class>neqsimserver2.Thermo.DisplayImage</servlet-class></servlet><servlet><servlet-name>DisplayJFreeChartImage</servlet-name><servlet-class>neqsimserver2.Thermo.DisplayJFreeChartImage</servlet-class></servlet><servlet><servlet-name>DisplayDocument</servlet-name><servlet-class>neqsimserver2.Util.DisplayDocument</servlet-class></servlet>
     <servlet>
         <servlet-name>action</servlet-name>
         <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
@@ -25,16 +34,30 @@
         </init-param>
         <load-on-startup>2</load-on-startup>
         </servlet>
+    <servlet>
+        <servlet-name>dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
     <servlet-mapping><servlet-name>Faces Servlet</servlet-name><url-pattern>/faces/*</url-pattern></servlet-mapping><servlet-mapping><servlet-name>ExceptionHandlerServlet</servlet-name><url-pattern>/error/ExceptionHandler</url-pattern></servlet-mapping><servlet-mapping><servlet-name>ThemeServlet</servlet-name><url-pattern>/theme/*</url-pattern></servlet-mapping><servlet-mapping><servlet-name>DisplayImage</servlet-name><url-pattern>/servlet/DisplayImage</url-pattern></servlet-mapping><servlet-mapping><servlet-name>DisplayJFreeChartImage</servlet-name><url-pattern>/servlet/DisplayJFreeChartImage</url-pattern></servlet-mapping><servlet-mapping><servlet-name>DisplayDocument</servlet-name><url-pattern>/servlet/DisplayDocument</url-pattern></servlet-mapping>
     <servlet-mapping>
         <servlet-name>action</servlet-name>
         <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>*.htm</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>faces/Login.jsp</welcome-file>
         </welcome-file-list><error-page><exception-type>javax.servlet.ServletException</exception-type><location>/error/ExceptionHandler</location></error-page><error-page><exception-type>java.io.IOException</exception-type><location>/error/ExceptionHandler</location></error-page><error-page><exception-type>javax.faces.FacesException</exception-type><location>/error/ExceptionHandler</location></error-page><error-page><exception-type>com.sun.rave.web.ui.appbase.ApplicationException</exception-type><location>/error/ExceptionHandler</location></error-page><jsp-config><jsp-property-group><url-pattern>*.jspf</url-pattern><is-xml>true</is-xml></jsp-property-group></jsp-config>
     <resource-ref>
         <res-ref-name>jdbc/NeqsimDataSource</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+    <resource-ref>
+        <res-ref-name>jdbc/NeqsimThermoDatabase</res-ref-name>
         <res-type>javax.sql.DataSource</res-type>
         <res-auth>Container</res-auth>
         <res-sharing-scope>Shareable</res-sharing-scope>
