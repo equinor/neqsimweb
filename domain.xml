@@ -183,7 +183,7 @@
         <property name="default-digest-algorithm" value="SHA-256"></property>
       </security-service>
       <java-config classpath-suffix="" debug-options="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=9009" system-classpath="">
-        <jvm-options>-XX:MaxPermSize=192m</jvm-options>
+        <jvm-options>-XX:MaxPermSize=1g</jvm-options>
         <jvm-options>-client</jvm-options>
         <jvm-options>-Djava.awt.headless=false</jvm-options>
         <jvm-options>-Djdk.corba.allowOutputStreamSubclass=true</jvm-options>
@@ -355,7 +355,7 @@
       <transaction-service automatic-recovery="true" tx-log-dir="${com.sun.aas.instanceRoot}/logs"></transaction-service>
       <diagnostic-service></diagnostic-service>
       <java-config classpath-suffix="" debug-options="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=${JAVA_DEBUGGER_PORT}" system-classpath="">
-        <jvm-options>-XX:MaxPermSize=192m</jvm-options>
+        <jvm-options>-XX:MaxPermSize=1g</jvm-options>
         <jvm-options>-server</jvm-options>
         <jvm-options>-Djava.awt.headless=false</jvm-options>
         <jvm-options>-Djdk.corba.allowOutputStreamSubclass=true</jvm-options>
