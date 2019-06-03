@@ -6,7 +6,7 @@ RUN wget http://ftp.halifax.rwth-aachen.de/eclipse//glassfish/glassfish-5.1.0.zi
     unzip glassfish-5.1.0.zip && rm -rf glassfish-5.1.0.zip
 ENV DISPLAY :0
 # Disable loading of GNOME Accessibilty libs
-# RUN echo "" > /etc/java-8-openjdk/accessibility.properties
+RUN echo "" > /etc/java-8-openjdk/accessibility.properties
 # Copy over libs, config, app, and run-script.
 WORKDIR /home/glassfish/glassfish5/glassfish
 COPY ./lib/mysql-connector-java-8.0.11.jar ./lib/
