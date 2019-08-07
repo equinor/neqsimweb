@@ -23,11 +23,11 @@ public class LoginBean implements Serializable{
     
     private String username="";
     private String password="";
-    private String correctName="statoil";
-    private String correctPassword="gpro";
-    private String companyName="statoil";
-    private String licenceTypeName="full";
-    private String licenceExpDate="2014-12-31";
+    private String correctName="";
+    private String correctPassword="";
+    private String companyName="";
+    private String licenceTypeName="";
+    private String licenceExpDate="";
     private int userID = 2;
     private SessionBean1 sessionBean1 = null;
     private int companyID = 1;
