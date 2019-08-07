@@ -93,11 +93,11 @@ public class SecurityFilter implements Filter{
             if(((neqsimserver2.SessionBean1)session.getAttribute("SessionBean1"))!=null) {
                 if(!((neqsimserver2.SessionBean1)session.getAttribute("SessionBean1")).getLoginBean().isLoginGood()){
                     System.out.println("logon failed");
-                    res.sendRedirect("/neqsimserver2");
+                    res.sendRedirect("/NeqSimServer3");
                     return;
                 }
             } else{
-                res.sendRedirect("/neqsimserver2");
+                res.sendRedirect("/NeqSimServer3");
                 return;
             }
         }

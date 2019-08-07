@@ -313,7 +313,7 @@ public class Login extends AbstractPageBean {
      * this page.</p>
      */
     public void prerender() {
-        String usernameLocal = "statoil";//System.getProperty("user.name");
+        String usernameLocal = "equinor";//System.getProperty("user.name");
         //usernameLocal = usernameLocal.replace("A_", "");
         //usernameLocal = usernameLocal.replace("STATOIL-NET\\", "");
         //usernameLocal = usernameLocal.replace("WIN-NTNU-NO\\", "");

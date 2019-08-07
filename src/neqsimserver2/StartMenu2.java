@@ -518,24 +518,6 @@ public class StartMenu2 extends AbstractPageBean {
     public void setLinkAction6Text4(HtmlOutputText hot) {
         this.linkAction6Text4 = hot;
     }
-    private HtmlOutputLink hyperlink1 = new HtmlOutputLink();
-
-    public HtmlOutputLink getHyperlink1() {
-        return hyperlink1;
-    }
-
-    public void setHyperlink1(HtmlOutputLink hol) {
-        this.hyperlink1 = hol;
-    }
-    private HtmlOutputText hyperlink1Text = new HtmlOutputText();
-
-    public HtmlOutputText getHyperlink1Text() {
-        return hyperlink1Text;
-    }
-
-    public void setHyperlink1Text(HtmlOutputText hot) {
-        this.hyperlink1Text = hot;
-    }
     private GeoCoder geoCoder1 = new GeoCoder();
 
     public GeoCoder getGeoCoder1() {

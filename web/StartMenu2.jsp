@@ -101,7 +101,7 @@
                             id="gasQualityCalcLinkAction1" style="font-size: 14px; height: 22px; left: 240px; top: 432px; position: absolute; width: 288px" styleClass="body-text-hyperlink-box">
                             <h:outputText binding="#{StartMenu2.linkAction2Text10}" id="linkAction2Text10" styleClass="body-text-hyperlink-box" value="Calculator"/>
                         </h:commandLink>
-                        <h:commandLink binding="#{StartMenu2.linkAction2}" id="linkAction2"
+                        <h:commandLink action="#{StartMenu2.linkAction2_action}" binding="#{StartMenu2.linkAction2}" id="linkAction2"
                             style="height: 24px; left: 24px; top: 240px; position: absolute; width: 192px" styleClass="body-text-hyperlink-box">
                             <h:outputText binding="#{StartMenu2.linkAction1Text4}" id="linkAction1Text4" styleClass="body-text-hyperlink-box" value="Home"/>
                         </h:commandLink>
@@ -114,10 +114,6 @@
                             id="statoilProcessSimAction1" style="font-size: 14px; height: 22px; left: 576px; top: 288px; position: absolute; width: 288px" styleClass="body-text-hyperlink-box">
                             <h:outputText binding="#{StartMenu2.linkAction6Text4}" id="linkAction6Text4" styleClass="body-text-hyperlink-box" value="Process Simulation Model Database"/>
                         </h:commandLink>
-                        <h:outputLink binding="#{StartMenu2.hyperlink1}" id="hyperlink1" style="left: 24px; top: 288px; position: absolute; width: 190px"
-                            styleClass="body-text-hyperlink-box" target="_blank" title="Forum" value="/GasQualityForum">
-                            <h:outputText binding="#{StartMenu2.hyperlink1Text}" id="hyperlink1Text" styleClass="body-text-hyperlink-box" value="Forum"/>
-                        </h:outputLink>
                         <h:commandLink action="#{StartMenu2.gasQualityStandardsLinkAction2_action}" id="gasQualityStandardsLinkAction2"
                             style="font-size: 14px; height: 22px; left: 576px; top: 264px; position: absolute; width: 288px" styleClass="body-text-hyperlink-box">
                             <h:outputText id="linkAction2Text11" styleClass="body-text-hyperlink-box" value="Standards Database"/>
@@ -144,7 +140,7 @@
                         </h:commandLink>
                         <ui:hyperlink id="hyperlink2"
                             style="color: blue; height: 24px; left: 24px; top: 264px; position: absolute; text-decoration: underline; width: 192px"
-                            styleClass="body-text-hyperlink-box" target="_blank" text="Documentation" toolTip="Learn how to use NeqSim" url="http://129.241.62.72:8080/NeqSimWiki/en/NeqSim_Wiki"/>
+                            styleClass="body-text-hyperlink-box" target="_blank" text="Documentation" toolTip="Learn how to use NeqSim" url="https://wiki.equinor.com/wiki/index.php/NeqSim"/>
                         <ui:hyperlink action="#{StartMenu2.thermoDocumentationLink_action}" id="thermoDocumentationLink"
                             style="color: blue; height: 24px; left: 240px; top: 168px; position: absolute; text-decoration: underline; width: 286px"
                             styleClass="body-text-hyperlink-box" target="_blank" text="Documentation" url="http://129.241.62.72:8080/NeqSimWiki/en/Thermodynamic_and_physical_properties"/>
@@ -171,11 +167,8 @@
                             style="color: blue; height: 24px; left: 576px; top: 504px; position: absolute; text-decoration: underline; width: 286px"
                             styleClass="body-text-hyperlink-box" text="Documentation" url="http://129.241.62.72:8080/NeqSimWiki/en/Process_Economy"/>
                         <ui:hyperlink id="hyperlink3"
-                            style="color: blue; height: 24px; left: 24px; top: 312px; position: absolute; text-decoration: underline; width: 192px"
-                            styleClass="body-text-hyperlink-box" text="Learning" toolTip="The gas processing learning WIKI" url="http://129.241.62.72:8080/NeqSimWiki/en/Gas_Processing_Learning_Wiki"/>
-                        <ui:hyperlink action="#{StartMenu2.hyperlink4_action}" id="hyperlink4"
-                            style="color: blue; height: 24px; left: 24px; top: 336px; position: absolute; text-decoration: underline; width: 192px"
-                            styleClass="body-text-hyperlink-box" text="Install" toolTip="Local installation is needed to get access to NeqSim models in HYSYS" url="/resources/NeqSimCO.msi"/>
+                            style="color: blue; height: 24px; left: 24px; top: 288px; position: absolute; text-decoration: underline; width: 192px"
+                            styleClass="body-text-hyperlink-box" target="_blank" text="NeqSim Wiki" toolTip="NeqSim Wiki" url="https://wiki.equinor.com/wiki/index.php/WIKIHOW:How_to_use_NeqSim"/>
                     </ui:form>
                 </ui:body>
             </ui:html>

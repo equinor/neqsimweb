@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div style="-rave-layout: grid" xmlns:h="http://java.sun.com/jsf/html">
     <h:outputText binding="#{BottomText.createdByText}" id="createdByText"
-        style="height: 24px; position: absolute; width: 578px; font-size: 14px; left: 24px; top: 24px" styleClass="" value="Maintained by: Even Solbraa, Statoil"/>
-    <h:outputText id="createdByText1" style="font-size: 14px; height: 24px; left: 24px; top: 48px; position: absolute; width: 578px" styleClass="" value="NeqSim update 15/9-2015"/>
+        style="height: 24px; position: absolute; width: 578px; font-size: 14px; left: 24px; top: 24px" styleClass="" value="Maintained by: Even Solbraa, Equinor"/>
+    <h:outputText id="createdByText1" style="font-size: 14px; height: 24px; left: 24px; top: 48px; position: absolute; width: 578px" styleClass="" value="NeqSim update 3/6-2019"/>
 </div>
