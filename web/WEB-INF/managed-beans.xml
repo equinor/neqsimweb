@@ -228,11 +228,6 @@
         <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
     <managed-bean>
-        <managed-bean-name>Thermo$PhaseEnvelope</managed-bean-name>
-        <managed-bean-class>neqsimserver2.Thermo.PhaseEnvelope</managed-bean-class>
-        <managed-bean-scope>request</managed-bean-scope>
-    </managed-bean>
-    <managed-bean>
         <managed-bean-name>Thermo$EnvelopeView</managed-bean-name>
         <managed-bean-class>neqsimserver2.Thermo.EnvelopeView</managed-bean-class>
         <managed-bean-scope>request</managed-bean-scope>
@@ -574,6 +569,7 @@
         <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
 </faces-config>
+
 
 
 

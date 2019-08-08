@@ -273,7 +273,7 @@ public class PhaseEnvelope2 extends AbstractPageBean {
             }
 
 
-            getThermo$ThermoSessionBean().getThermodynamicOperation().calcPTphaseEnvelope(true);//true);
+            getThermo$ThermoSessionBean().getThermodynamicOperation().calcPTphaseEnvelope(false,minPressure);//true);
             boolean isFinished = getThermo$ThermoSessionBean().getThermodynamicOperation().waitAndCheckForFinishedCalculation(150000);
             if (aqueousLineCheckBox.isSelected() && hasWater) {
                 getThermo$ThermoSessionBean().getThermodynamicOperation().addData("water", waterData);

@@ -42,16 +42,25 @@ public class DisplayJFreeChartImage extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        try {
 
-        SessionBean1 sessionBean1 = (SessionBean1) request.getSession().getAttribute("SessionBean1");
-        JFreeChart chart = sessionBean1.getJFreeChartObject();
-        response.setContentType("image/jpeg");
+            SessionBean1 sessionBean1 = (SessionBean1) request.getSession().getAttribute("SessionBean1");
+            JFreeChart chart = sessionBean1.getJFreeChartObject();
+            response.setContentType("image/png");
 
-        BufferedImage buf = chart.createBufferedImage(640, 400, null);
+            BufferedImage buf = chart.createBufferedImage(640, 400, null);
 
-        // java.awt.image.BufferedImage ChartImage = new java.awt.image.BufferedImage(640, 400, java.awt.image.BufferedImage.TYPE_INT_RGB);
-        ImageIO.write(buf, "jpeg", response.getOutputStream());
-
+            // java.awt.image.BufferedImage ChartImage = new java.awt.image.BufferedImage(640, 400, java.awt.image.BufferedImage.TYPE_INT_RGB);
+            ImageIO.write(buf, "png", response.getOutputStream());
+            response.getOutputStream().flush();
+        } catch (Exception e) {
+            e.printStackTrace();
+            //.....
+        } finally {
+            if (null != response.getOutputStream()) {
+                response.getOutputStream().close();
+            }
+        }
         /// JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(response.getOutputStream());
         // JPEGEncodeParam param = encoder.getDefaultJPEGEncodeParam(buf);
         //  param.setQuality(0.75f, true);
