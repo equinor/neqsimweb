@@ -37,6 +37,7 @@ public class ThermoSessionBean extends AbstractSessionBean {
         }
         // </editor-fold>
         // Additional user provided initialization code
+        neqsim.util.database.NeqSimDataBase.setDataBaseType("mySQL");
         thermoSystem = new neqsim.thermo.system.SystemSrkEos();
         setThermodynamicOperation(new neqsim.thermodynamicOperations.ThermodynamicOperations(thermoSystem));
         ISOstandard = new neqsim.standards.gasQuality.Standard_ISO6976(thermoSystem);

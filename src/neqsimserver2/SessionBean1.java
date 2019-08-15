@@ -9,6 +9,7 @@ package neqsimserver2;
 import javax.faces.*;
 import com.sun.sql.rowset.CachedRowSetXImpl;
 import com.sun.data.provider.impl.CachedRowSetDataProvider;
+import neqsimserver2.Util.LoginBean;
 import org.jfree.chart.JFreeChart;
 import com.sun.rave.web.ui.appbase.AbstractSessionBean;
 import neqsimserver2.Thermo.ThermoSessionBean;
@@ -17,6 +18,15 @@ public class SessionBean1 extends AbstractSessionBean {
     // <editor-fold defaultstate="collapsed" desc="Creator-managed Component Definition">
 
     private int __placeholder;
+
+    public SessionBean1(int __placeholder, LoginBean loginBean, int litteratureID, JFreeChart jFreeChartObject, String documentName, int documentID) {
+        this.__placeholder = __placeholder;
+        this.loginBean = loginBean;
+        this.litteratureID = litteratureID;
+        this.jFreeChartObject = jFreeChartObject;
+        this.documentName = documentName;
+        this.documentID = documentID;
+    }
     private static Integer numberOfStartPageViews = new Integer(0);
     private CachedRowSetXImpl analyserlocationviewRowSet = new CachedRowSetXImpl();
     private String activeSubject = new String("thermo");
