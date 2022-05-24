@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-slim-stretch
+FROM openjdk:18.0-jdk
 WORKDIR /home/glassfish/
 # Update and install dependencies
 RUN apt-get -y update && \
