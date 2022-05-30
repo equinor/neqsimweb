@@ -1,4 +1,4 @@
-FROM openjdk:18.0-jdk
+FROM openjdk:18.0-jdk-slim-buster
 WORKDIR /home/glassfish/
 # Update and install dependencies
 RUN apt-get -y update && \
