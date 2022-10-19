@@ -1,4 +1,4 @@
-FROM openjdk:18.0-jdk-slim-buster
+FROM openjdk:20-ea-16-slim-bullseye
 WORKDIR /home/glassfish/
 # Update and install dependencies
 RUN apt-get -y update && \
