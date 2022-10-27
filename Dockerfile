@@ -1,4 +1,4 @@
-FROM openjdk:20-ea-16-slim-bullseye
+FROM openjdk:20-ea-19-oraclelinux8
 WORKDIR /home/glassfish/
 # Update and install dependencies
 RUN apt-get -y update && \
